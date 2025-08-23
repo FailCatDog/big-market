@@ -15,9 +15,9 @@ import java.util.concurrent.*;
 @EnableConfigurationProperties(ThreadPoolConfigProperties.class)
 public class ThreadPoolConfig {
 
-    @Bean
-    @ConditionalOnMissingBean(ThreadPoolExecutor.class)
-    public ThreadPoolExecutor threadPoolExecutor(ThreadPoolConfigProperties properties) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+    @Bean("threadPoolExecutor")
+    @ConditionalOnMissingBean(name = "threadPoolExecutor")
+    public ThreadPoolExecutor threadPoolExecutor(ThreadPoolConfigProperties properties) {
         // 实例化策略
         RejectedExecutionHandler handler;
         switch (properties.getPolicy()){

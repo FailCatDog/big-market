@@ -1,7 +1,7 @@
 package cn.hgy.config;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.serializer.SerializerFeature;
+import com.alibaba.fastjson2.JSON;
+import com.alibaba.fastjson2.JSONWriter;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufAllocator;
 import io.netty.buffer.ByteBufInputStream;
@@ -35,7 +35,7 @@ public class RedisClientConfig {
 
         config.useSingleServer()
                 .setAddress("redis://" + properties.getHost() + ":" + properties.getPort())
-//                .setPassword(properties.getPassword())
+                .setPassword(properties.getPassword())
                 .setConnectionPoolSize(properties.getPoolSize())
                 .setConnectionMinimumIdleSize(properties.getMinIdleSize())
                 .setIdleConnectionTimeout(properties.getIdleTimeout())
@@ -55,11 +55,8 @@ public class RedisClientConfig {
             ByteBuf out = ByteBufAllocator.DEFAULT.buffer();
             try {
                 ByteBufOutputStream os = new ByteBufOutputStream(out);
-                JSON.writeJSONString(os, in, SerializerFeature.WriteClassName);
+                JSON.writeTo(os, in, JSONWriter.Feature.WriteClassName);
                 return os.buffer();
-            } catch (IOException e) {
-                out.release();
-                throw e;
             } catch (Exception e) {
                 out.release();
                 throw new IOException(e);

@@ -3,6 +3,8 @@ package cn.hgy.domain.strategy.repository;
 import cn.hgy.domain.strategy.model.entity.StrategyAwardEntity;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -15,4 +17,10 @@ public interface IStrategyRepository {
 
 
     List<StrategyAwardEntity> queryStrategyAwardList(Long strategyId);
+
+    void storeStrategyAwardSearchRateTable(Long strategyId, BigDecimal rateRange, HashMap<Integer, Integer> shuffledStrategyAwardSearchRateTables);
+
+    int getRateRange(Long strategyId);
+
+    Integer getStrategyAwardAssemble(Long strategyId, int rateKey);
 }

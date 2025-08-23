@@ -47,6 +47,7 @@ redis:
       ping-interval: 60000
       retry-interval: 1000
       keep-alive: true
+      password: Hgy@123
 
 # 日志
 logging:
