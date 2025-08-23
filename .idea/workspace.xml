@@ -4,45 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68cd9c8a-9522-41e0-a53b-3d331f087041" name="更改" comment="删除文件 .idea">
-      <change afterPath="$PROJECT_DIR$/Big-Market-app/src/main/resources/mybatis/mapper/award_mapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-app/src/main/resources/mybatis/mapper/strategy_award_mapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-app/src/main/resources/mybatis/mapper/strategy_mapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-app/src/main/resources/mybatis/mapper/strategy_rule_mapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-app/src/test/java/cn/hgy/test/domain/StrategyArmoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-app/src/test/java/cn/hgy/test/infrastructure/AwardDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-infrastructure/src/main/java/cn/hgy/infrastructure/persistent/dao/IAwardDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-infrastructure/src/main/java/cn/hgy/infrastructure/persistent/dao/IStrategyAwardDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-infrastructure/src/main/java/cn/hgy/infrastructure/persistent/dao/IStrategyDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-infrastructure/src/main/java/cn/hgy/infrastructure/persistent/dao/IStrategyRuleDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-infrastructure/src/main/java/cn/hgy/infrastructure/persistent/po/Award.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-infrastructure/src/main/java/cn/hgy/infrastructure/persistent/po/Strategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-infrastructure/src/main/java/cn/hgy/infrastructure/persistent/po/StrategyAward.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-infrastructure/src/main/java/cn/hgy/infrastructure/persistent/po/StrategyRule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/dev-ops/mysql/sql/big_market.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="68cd9c8a-9522-41e0-a53b-3d331f087041" name="更改" comment="fix: 修正">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-app/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-app/src/main/java/cn/hgy/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-app/src/main/java/cn/hgy/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-app/src/main/java/cn/hgy/config/GuavaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-app/src/main/java/cn/hgy/config/GuavaConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-app/src/main/java/cn/hgy/config/RedisClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-app/src/main/java/cn/hgy/config/RedisClientConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-app/src/main/java/cn/hgy/config/ThreadPoolConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-app/src/main/java/cn/hgy/config/ThreadPoolConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Big-Market-app/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-app/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-app/src/main/resources/mybatis/mapper/frame_case_mapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-app/src/test/java/cn/hgy/test/ApiTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Big-Market-app/src/main/resources/application-test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-app/src/main/resources/application-test.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Big-Market-app/src/test/resources/application-test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-app/src/test/resources/application-test.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-domain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-domain/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/repository/IStrategyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/repository/IStrategyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/armory/IStrategyArmory.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/armory/IStrategyArmory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/armory/StrategyArmory.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/armory/StrategyArmory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-infrastructure/src/main/java/cn/hgy/infrastructure/persistent/repository/StrategyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-infrastructure/src/main/java/cn/hgy/infrastructure/persistent/repository/StrategyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-trigger/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-trigger/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-types/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-types/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-types/src/main/java/cn/hgy/types/common/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-types/src/main/java/cn/hgy/types/common/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/log/log_error.log" beforeDir="false" afterPath="$PROJECT_DIR$/data/log/log_error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/log/log_info.log" beforeDir="false" afterPath="$PROJECT_DIR$/data/log/log_info.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/dev-ops/mysql/sql/xfg-frame-archetype.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +70,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.Application.executor": "Run",
-    "git-widget-placeholder": "正在合并 250822-stategy-armory",
+    "git-widget-placeholder": "250822-stategy-armory",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "E:/Code-Project/Java-Project/Big-Market",
@@ -130,7 +96,7 @@
       <recent name="E:\Code-Project\Java-Project\Big-Market\Big-Market-app\src\main\resources\mybatis\mapper" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.StrategyArmoryTest.test_strategyArmory">
+  <component name="RunManager" selected="JUnit.StrategyArmoryTest.test_getAssembleRandomVal">
     <configuration name="AwardDaoTest.test_queryAwardList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Big-Market-app" />
       <extension name="coverage">
@@ -188,8 +154,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.StrategyArmoryTest.test_strategyArmory" />
         <item itemvalue="JUnit.StrategyArmoryTest.test_getAssembleRandomVal" />
+        <item itemvalue="JUnit.StrategyArmoryTest.test_strategyArmory" />
         <item itemvalue="JUnit.AwardDaoTest.test_queryAwardList" />
       </list>
     </recent_temporary>
@@ -214,7 +180,7 @@
       <workItem from="1755770931667" duration="11009000" />
       <workItem from="1755786686385" duration="1049000" />
       <workItem from="1755879250229" duration="47000" />
-      <workItem from="1755922689303" duration="1927000" />
+      <workItem from="1755922689303" duration="2983000" />
     </task>
     <task id="LOCAL-00001" summary="fix: 修正">
       <option name="closed" value="true" />
@@ -248,7 +214,23 @@
       <option name="project" value="LOCAL" />
       <updated>1755787881634</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix: 修正">
+      <option name="closed" value="true" />
+      <created>1755924865046</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1755924865046</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix: 修正">
+      <option name="closed" value="true" />
+      <created>1755925051259</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1755925051259</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,9 +261,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="提交本地.gitignore的修改" />
-    <MESSAGE value="fix: 修正" />
     <MESSAGE value="feat: 新增库表实体类、单元测试通过" />
+    <MESSAGE value="提交本地修改，解决与远程的冲突" />
     <MESSAGE value="删除文件 .idea" />
-    <option name="LAST_COMMIT_MESSAGE" value="删除文件 .idea" />
+    <MESSAGE value="fix: 修正" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: 修正" />
   </component>
 </project>
