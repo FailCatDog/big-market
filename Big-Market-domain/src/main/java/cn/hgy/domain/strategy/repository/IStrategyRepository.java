@@ -1,6 +1,8 @@
 package cn.hgy.domain.strategy.repository;
 
 import cn.hgy.domain.strategy.model.entity.StrategyAwardEntity;
+import cn.hgy.domain.strategy.model.entity.StrategyEntity;
+import cn.hgy.domain.strategy.model.entity.StrategyRuleEntity;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -12,15 +14,21 @@ import java.util.List;
  * @CreateTime: 2025-08-22
  * @Description: 策略仓储接口
  */
-@Service
 public interface IStrategyRepository {
 
 
     List<StrategyAwardEntity> queryStrategyAwardList(Long strategyId);
 
-    void storeStrategyAwardSearchRateTable(Long strategyId, BigDecimal rateRange, HashMap<Integer, Integer> shuffledStrategyAwardSearchRateTables);
+    void storeStrategyAwardSearchRateTable(String key, BigDecimal rateRange, HashMap<Integer, Integer> shuffledStrategyAwardSearchRateTables);
 
     int getRateRange(Long strategyId);
 
-    Integer getStrategyAwardAssemble(Long strategyId, int rateKey);
+    int getRateRange(String key);
+
+    Integer getStrategyAwardAssemble(String key, int rateKey);
+
+    StrategyEntity queryStrategyEntityByStrategyId(Long strategyId);
+
+    StrategyRuleEntity queryStrategyRule(Long strategyId, String ruleModel);
+
 }
