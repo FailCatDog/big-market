@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68cd9c8a-9522-41e0-a53b-3d331f087041" name="更改" comment="feat: 策略概率装配处理">
+    <list default="true" id="68cd9c8a-9522-41e0-a53b-3d331f087041" name="更改" comment="feat: 抽奖前置和中置规则过滤">
       <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/model/entity/StrategyEntity.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/model/entity/StrategyRuleEntity.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/armory/IStrategyDispatch.java" afterDir="false" />
@@ -110,7 +110,7 @@
       <recent name="E:\Code-Project\Java-Project\Big-Market\Big-Market-app\src\main\resources\mybatis\mapper" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.StrategyArmoryTest.test_getAssembleRandomVal">
+  <component name="RunManager" selected="Spring Boot.Application">
     <configuration name="AwardDaoTest.test_queryAwardList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Big-Market-app" />
       <extension name="coverage">
