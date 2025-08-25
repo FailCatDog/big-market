@@ -1,4 +1,4 @@
-package cn.hgy.domain.strategy.service.armory;
+package cn.hgy.domain.strategy.model.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

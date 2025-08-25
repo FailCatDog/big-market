@@ -4,11 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68cd9c8a-9522-41e0-a53b-3d331f087041" name="更改" comment="fix: 修正">
+    <list default="true" id="68cd9c8a-9522-41e0-a53b-3d331f087041" name="更改" comment="feat: 策略概率装配处理">
+      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/model/entity/StrategyEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/model/entity/StrategyRuleEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/armory/IStrategyDispatch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-app/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-app/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-app/src/main/resources/application-test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-app/src/main/resources/application-test.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-app/src/test/resources/application-test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-app/src/test/resources/application-test.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Big-Market-app/src/main/resources/mybatis/mapper/strategy_mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-app/src/main/resources/mybatis/mapper/strategy_mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Big-Market-app/src/main/resources/mybatis/mapper/strategy_rule_mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-app/src/main/resources/mybatis/mapper/strategy_rule_mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Big-Market-app/src/test/java/cn/hgy/test/domain/StrategyArmoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-app/src/test/java/cn/hgy/test/domain/StrategyArmoryDispatchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/repository/IStrategyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/repository/IStrategyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/armory/IStrategyArmory.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/armory/IStrategyArmory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/armory/StrategyArmory.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/armory/StrategyArmoryDispatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/armory/StrategyConditionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/model/entity/StrategyConditionEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Big-Market-infrastructure/src/main/java/cn/hgy/infrastructure/persistent/dao/IStrategyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-infrastructure/src/main/java/cn/hgy/infrastructure/persistent/dao/IStrategyDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Big-Market-infrastructure/src/main/java/cn/hgy/infrastructure/persistent/dao/IStrategyRuleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-infrastructure/src/main/java/cn/hgy/infrastructure/persistent/dao/IStrategyRuleDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Big-Market-infrastructure/src/main/java/cn/hgy/infrastructure/persistent/po/Strategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-infrastructure/src/main/java/cn/hgy/infrastructure/persistent/po/Strategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Big-Market-infrastructure/src/main/java/cn/hgy/infrastructure/persistent/po/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Big-Market-infrastructure/src/main/java/cn/hgy/infrastructure/persistent/repository/StrategyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-infrastructure/src/main/java/cn/hgy/infrastructure/persistent/repository/StrategyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Big-Market-types/src/main/java/cn/hgy/types/common/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-types/src/main/java/cn/hgy/types/common/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Big-Market-types/src/main/java/cn/hgy/types/enums/ResponseCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-types/src/main/java/cn/hgy/types/enums/ResponseCode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +45,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="250822-stategy-armory" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,40 +71,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.AwardDaoTest.test_queryAwardList.executor": "Run",
-    "JUnit.StrategyArmoryTest.test_getAssembleRandomVal.executor": "Run",
-    "JUnit.StrategyArmoryTest.test_strategyArmory.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "Maven.Big-Market [clean].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.Application.executor": "Run",
-    "git-widget-placeholder": "250822-stategy-armory",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/Code-Project/Java-Project/Big-Market",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "模块",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.47562099",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.AwardDaoTest.test_queryAwardList.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StrategyArmoryTest.test_getAssembleRandomVal.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StrategyArmoryTest.test_strategyArmory.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Big-Market [clean].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Code-Project/Java-Project/Big-Market&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.47562099&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Code-Project\Java-Project\Big-Market\Big-Market-app\src\main\resources\mybatis\mapper" />
@@ -108,6 +122,38 @@
       <option name="PACKAGE_NAME" value="cn.hgy.test.infrastructure" />
       <option name="MAIN_CLASS_NAME" value="cn.hgy.test.infrastructure.AwardDaoTest" />
       <option name="METHOD_NAME" value="test_queryAwardList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StrategyArmoryDispatchTest.test_getAssembleRandomVal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Big-Market-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.hgy.test.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.hgy.test.domain" />
+      <option name="MAIN_CLASS_NAME" value="cn.hgy.test.domain.StrategyArmoryDispatchTest" />
+      <option name="METHOD_NAME" value="test_getAssembleRandomVal" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StrategyArmoryDispatchTest.test_strategyArmory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Big-Market-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.hgy.test.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.hgy.test.domain" />
+      <option name="MAIN_CLASS_NAME" value="cn.hgy.test.domain.StrategyArmoryDispatchTest" />
+      <option name="METHOD_NAME" value="test_strategyArmory" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -154,9 +200,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.StrategyArmoryTest.test_getAssembleRandomVal" />
         <item itemvalue="JUnit.StrategyArmoryTest.test_strategyArmory" />
+        <item itemvalue="JUnit.StrategyArmoryTest.test_getAssembleRandomVal" />
         <item itemvalue="JUnit.AwardDaoTest.test_queryAwardList" />
+        <item itemvalue="JUnit.StrategyArmoryDispatchTest.test_getAssembleRandomVal" />
+        <item itemvalue="JUnit.StrategyArmoryDispatchTest.test_strategyArmory" />
       </list>
     </recent_temporary>
   </component>
@@ -181,6 +229,7 @@
       <workItem from="1755786686385" duration="1049000" />
       <workItem from="1755879250229" duration="47000" />
       <workItem from="1755922689303" duration="2983000" />
+      <workItem from="1755944939883" duration="4768000" />
     </task>
     <task id="LOCAL-00001" summary="fix: 修正">
       <option name="closed" value="true" />
