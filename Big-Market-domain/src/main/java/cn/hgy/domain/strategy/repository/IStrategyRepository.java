@@ -3,6 +3,7 @@ package cn.hgy.domain.strategy.repository;
 import cn.hgy.domain.strategy.model.entity.StrategyAwardEntity;
 import cn.hgy.domain.strategy.model.entity.StrategyEntity;
 import cn.hgy.domain.strategy.model.entity.StrategyRuleEntity;
+import cn.hgy.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -31,4 +32,7 @@ public interface IStrategyRepository {
 
     StrategyRuleEntity queryStrategyRule(Long strategyId, String ruleModel);
 
+    String queryStrategyRuleValue(Long strategyId, Integer awardId, String ruleModel);
+
+    StrategyAwardRuleModelVO queryStrategyAwardRuleModelVO(Long strategyId, Integer awardId);
 }
