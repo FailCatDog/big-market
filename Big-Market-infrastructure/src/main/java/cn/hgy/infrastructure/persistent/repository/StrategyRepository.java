@@ -3,6 +3,7 @@ package cn.hgy.infrastructure.persistent.repository;
 import cn.hgy.domain.strategy.model.entity.StrategyAwardEntity;
 import cn.hgy.domain.strategy.model.entity.StrategyEntity;
 import cn.hgy.domain.strategy.model.entity.StrategyRuleEntity;
+import cn.hgy.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 import cn.hgy.domain.strategy.repository.IStrategyRepository;
 import cn.hgy.infrastructure.persistent.dao.IStrategyAwardDao;
 import cn.hgy.infrastructure.persistent.dao.IStrategyDao;
@@ -118,5 +119,23 @@ public class StrategyRepository implements IStrategyRepository {
                 .ruleValue(strategyRuleRes.getRuleValue())
                 .ruleDesc(strategyRuleRes.getRuleDesc())
                 .build();
+    }
+
+    @Override
+    public String queryStrategyRuleValue(Long strategyId, Integer awardId, String ruleModel) {
+        StrategyRule strategyRule = new StrategyRule();
+        strategyRule.setStrategyId(strategyId);
+        strategyRule.setAwardId(awardId);
+        strategyRule.setRuleModel(ruleModel);
+        return strategyRuleDao.queryStrategyRuleValue(strategyRule);
+    }
+
+    @Override
+    public StrategyAwardRuleModelVO queryStrategyAwardRuleModelVO(Long strategyId, Integer awardId) {
+        StrategyAward strategyAward = new StrategyAward();
+        strategyAward.setStrategyId(strategyId);
+        strategyAward.setAwardId(awardId);
+        String ruleModels = strategyAwardDao.queryStrategyAwardRuleModels(strategyAward);
+        return StrategyAwardRuleModelVO.builder().ruleModels(ruleModels).build();
     }
 }
