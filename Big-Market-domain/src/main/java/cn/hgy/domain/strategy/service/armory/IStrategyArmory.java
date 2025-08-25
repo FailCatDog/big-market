@@ -7,7 +7,11 @@ package cn.hgy.domain.strategy.service.armory;
  */
 public interface IStrategyArmory {
 
-    void assembleLotteryStrategy(Long strategyId);
+    /**
+     * 装配抽奖策略配置 TODO
+     * @param strategyId 策略ID
+     */
+    boolean assembleLotteryStrategy(Long strategyId);
 
-    Integer getRandomAwardId(Long strategyId);
+
 }
