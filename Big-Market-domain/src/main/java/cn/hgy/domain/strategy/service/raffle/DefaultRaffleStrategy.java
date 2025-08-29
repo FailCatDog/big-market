@@ -8,6 +8,7 @@ import cn.hgy.domain.strategy.repository.IStrategyRepository;
 import cn.hgy.domain.strategy.service.AbstractRaffleStrategy;
 import cn.hgy.domain.strategy.service.armory.IStrategyDispatch;
 import cn.hgy.domain.strategy.service.rule.ILogicFilter;
+import cn.hgy.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
 import cn.hgy.domain.strategy.service.rule.filter.factory.DefaultLogicFactory;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
@@ -30,8 +31,8 @@ public class DefaultRaffleStrategy extends AbstractRaffleStrategy {
     @Resource
     private DefaultLogicFactory logicFactory;
 
-    public DefaultRaffleStrategy(IStrategyRepository repository, IStrategyDispatch strategyDispatch) {
-        super(repository, strategyDispatch);
+    public DefaultRaffleStrategy(IStrategyRepository repository, IStrategyDispatch strategyDispatch, DefaultChainFactory defaultChainFactory) {
+        super(repository, strategyDispatch,defaultChainFactory);
     }
 
     @Override
