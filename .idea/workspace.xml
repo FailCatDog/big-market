@@ -4,128 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68cd9c8a-9522-41e0-a53b-3d331f087041" name="更改" comment="feat: 抽奖中规则过滤">
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/model/valobj/RuleLimitTypeVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/model/valobj/RuleTreeNodeLineVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/model/valobj/RuleTreeNodeVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/model/valobj/RuleTreeVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/chain/AbstractLogicChain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/chain/ILogicChain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/chain/ILogicChainArmory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/chain/factory/DefaultChainFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/chain/impl/BlackListLogicChain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/chain/impl/DefaultLogicChain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/chain/impl/RuleWeightLogicChain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/tree/ILogicTreeNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/tree/factory/DefaultTreeFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/tree/factory/engine/IDecisionTreeEngine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/tree/factory/engine/impl/DecisionTreeEngine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/tree/impl/RuleLockLogicTreeNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/tree/impl/RuleLuckAwardLogicTreeNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/tree/impl/RuleStockLogicTreeNode.java" afterDir="false" />
+    <list default="true" id="48ea919d-3a22-49ed-8dc8-4d2e4208fee8" name="更改" comment="feat: 抽奖前置和中置规则过滤">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-app/src/test/java/cn/hgy/test/domain/RaffleStrategyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-app/src/test/java/cn/hgy/test/domain/RaffleStrategyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/annotation/LogicStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/annotation/LogicStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/model/valobj/StrategyAwardRuleModelVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/model/valobj/StrategyAwardRuleModelVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/repository/IStrategyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/repository/IStrategyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/raffle/AbstractRaffleStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/AbstractRaffleStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/AbstractRaffleStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/AbstractRaffleStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/raffle/DefaultRaffleStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/raffle/DefaultRaffleStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/factory/DefaultLogicFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/filter/factory/DefaultLogicFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/impl/RuleBackListLogicFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/filter/impl/RuleBackListLogicFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/impl/RuleLockLogicFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/filter/impl/RuleLockLogicFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/impl/RuleWeightLogicFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/filter/impl/RuleWeightLogicFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-infrastructure/src/main/java/cn/hgy/infrastructure/persistent/repository/StrategyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-infrastructure/src/main/java/cn/hgy/infrastructure/persistent/repository/StrategyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/项目笔记.md" beforeDir="false" afterPath="$PROJECT_DIR$/项目笔记.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="AnnotationType" />
-        <option value="Enum" />
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="黄光宇 &lt;m17878660695@163.com&gt;" />
-      </list>
-    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="250825-raffle-rule-center" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="customMavenHome" value="D:\TOOOOOK\apache-maven-3.8.8" />
-        <option name="localRepository" value="D:\TOOOOOK\apache-maven-3.8.8\repository" />
-        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
-        <option name="userSettingsFile" value="D:\TOOOOOK\apache-maven-3.8.8\conf\settings.xml" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
-}</component>
-  <component name="ProjectId" id="31aBhRpWUchzcz4iMOi9x1BWaoY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "JUnit.AwardDaoTest.test_queryAwardList.executor": "Run",
-    "JUnit.StrategyArmoryTest.test_getAssembleRandomVal.executor": "Run",
-    "JUnit.StrategyArmoryTest.test_strategyArmory.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "Maven.Big-Market [clean].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.Application.executor": "Run",
     "git-widget-placeholder": "250828-rule-tree",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/Code-Project/Java-Project/Big-Market",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "模块",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.47562099",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
-    "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
-    ]
+    "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Code-Project\Java-Project\Big-Market\Big-Market-app\src\main\resources\mybatis\mapper" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Spring Boot.Application">
+  <component name="RunManager">
     <configuration name="AwardDaoTest.test_queryAwardList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Big-Market-app" />
       <extension name="coverage">
@@ -206,136 +111,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="Big-Market-app" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.hgy.Application" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.StrategyArmoryTest.test_strategyArmory" />
         <item itemvalue="JUnit.StrategyArmoryTest.test_getAssembleRandomVal" />
-        <item itemvalue="JUnit.AwardDaoTest.test_queryAwardList" />
-        <item itemvalue="JUnit.StrategyArmoryDispatchTest.test_getAssembleRandomVal" />
         <item itemvalue="JUnit.StrategyArmoryDispatchTest.test_strategyArmory" />
+        <item itemvalue="JUnit.StrategyArmoryDispatchTest.test_getAssembleRandomVal" />
+        <item itemvalue="JUnit.AwardDaoTest.test_queryAwardList" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
-      </set>
-    </attachedChunks>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="默认任务">
-      <changelist id="68cd9c8a-9522-41e0-a53b-3d331f087041" name="更改" comment="" />
-      <created>1755752422178</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1755752422178</updated>
-      <workItem from="1755752423212" duration="1503000" />
-      <workItem from="1755770931667" duration="11009000" />
-      <workItem from="1755786686385" duration="1049000" />
-      <workItem from="1755879250229" duration="47000" />
-      <workItem from="1755922689303" duration="2983000" />
-      <workItem from="1755944939883" duration="4768000" />
-      <workItem from="1756132307684" duration="3945000" />
-      <workItem from="1756265175754" duration="3463000" />
-      <workItem from="1756350684043" duration="3413000" />
-    </task>
-    <task id="LOCAL-00001" summary="fix: 修正">
-      <option name="closed" value="true" />
-      <created>1755753295152</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1755753295152</updated>
-    </task>
-    <task id="LOCAL-00002" summary="feat: 新增库表实体类、单元测试通过">
-      <option name="closed" value="true" />
-      <created>1755785390578</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1755785390578</updated>
-    </task>
-    <task id="LOCAL-00003" summary="feat: 新增库表实体类、单元测试通过">
-      <option name="closed" value="true" />
-      <created>1755785973107</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1755785973107</updated>
-    </task>
-    <task id="LOCAL-00004" summary="删除文件 .idea">
-      <option name="closed" value="true" />
-      <created>1755787881634</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1755787881634</updated>
-    </task>
-    <task id="LOCAL-00005" summary="fix: 修正">
-      <option name="closed" value="true" />
-      <created>1755924865046</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1755924865046</updated>
-    </task>
-    <task id="LOCAL-00006" summary="fix: 修正">
-      <option name="closed" value="true" />
-      <created>1755925051259</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1755925051259</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="250822-stategy-armory" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="提交本地.gitignore的修改" />
-    <MESSAGE value="feat: 新增库表实体类、单元测试通过" />
-    <MESSAGE value="提交本地修改，解决与远程的冲突" />
-    <MESSAGE value="删除文件 .idea" />
-    <MESSAGE value="fix: 修正" />
-    <MESSAGE value="feat: 策略概率装配处理&#10;Merge pull request !3 from 黄光宇/250822-stategy-armory" />
-    <MESSAGE value="feat: 策略权重装配处理" />
-    <MESSAGE value="feat: 抽奖中规则过滤" />
     <MESSAGE value="feat: 抽奖前置和中置规则过滤" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 抽奖前置和中置规则过滤" />
+    <MESSAGE value="feat: 抽奖中到抽奖后的规则树" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 抽奖中到抽奖后的规则树" />
   </component>
 </project>
