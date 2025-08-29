@@ -3,7 +3,7 @@ package cn.hgy.test.domain;
 import cn.hgy.domain.strategy.model.entity.RaffleAwardEntity;
 import cn.hgy.domain.strategy.model.entity.RaffleFactorEntity;
 import cn.hgy.domain.strategy.service.IRaffleStrategy;
-import cn.hgy.domain.strategy.service.rule.impl.RuleWeightLogicFilter;
+import cn.hgy.domain.strategy.service.rule.filter.impl.RuleWeightLogicFilter;
 import com.alibaba.fastjson2.JSON;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;

@@ -5,28 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68cd9c8a-9522-41e0-a53b-3d331f087041" name="更改" comment="feat: 抽奖中规则过滤">
-      <change afterPath="$PROJECT_DIR$/Big-Market-app/src/test/java/cn/hgy/test/domain/RaffleStrategyTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/annotation/LogicStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/model/entity/RaffleAwardEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/model/entity/RaffleFactorEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/model/entity/RuleActionEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/model/entity/RuleMatterEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/model/valobj/RuleLogicCheckTypeVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/model/valobj/StrategyAwardRuleModelVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/IRaffleStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/raffle/AbstractRaffleStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/raffle/DefaultRaffleStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/ILogicFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/factory/DefaultLogicFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/impl/RuleBackListLogicFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/impl/RuleLockLogicFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/impl/RuleWeightLogicFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/model/valobj/RuleLimitTypeVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/model/valobj/RuleTreeNodeLineVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/model/valobj/RuleTreeNodeVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/model/valobj/RuleTreeVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/chain/AbstractLogicChain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/chain/ILogicChain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/chain/ILogicChainArmory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/chain/factory/DefaultChainFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/chain/impl/BlackListLogicChain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/chain/impl/DefaultLogicChain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/chain/impl/RuleWeightLogicChain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/tree/ILogicTreeNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/tree/factory/DefaultTreeFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/tree/factory/engine/IDecisionTreeEngine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/tree/factory/engine/impl/DecisionTreeEngine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/tree/impl/RuleLockLogicTreeNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/tree/impl/RuleLuckAwardLogicTreeNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/tree/impl/RuleStockLogicTreeNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-app/src/main/resources/mybatis/mapper/strategy_award_mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-app/src/main/resources/mybatis/mapper/strategy_award_mapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-app/src/main/resources/mybatis/mapper/strategy_rule_mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-app/src/main/resources/mybatis/mapper/strategy_rule_mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Big-Market-app/src/test/java/cn/hgy/test/domain/RaffleStrategyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-app/src/test/java/cn/hgy/test/domain/RaffleStrategyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/annotation/LogicStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/annotation/LogicStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/model/valobj/StrategyAwardRuleModelVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/model/valobj/StrategyAwardRuleModelVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/repository/IStrategyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/repository/IStrategyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-infrastructure/src/main/java/cn/hgy/infrastructure/persistent/dao/IStrategyAwardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-infrastructure/src/main/java/cn/hgy/infrastructure/persistent/dao/IStrategyAwardDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Big-Market-infrastructure/src/main/java/cn/hgy/infrastructure/persistent/dao/IStrategyRuleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-infrastructure/src/main/java/cn/hgy/infrastructure/persistent/dao/IStrategyRuleDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/raffle/AbstractRaffleStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/AbstractRaffleStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/raffle/DefaultRaffleStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/raffle/DefaultRaffleStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/factory/DefaultLogicFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/filter/factory/DefaultLogicFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/impl/RuleBackListLogicFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/filter/impl/RuleBackListLogicFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/impl/RuleLockLogicFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/filter/impl/RuleLockLogicFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/impl/RuleWeightLogicFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-domain/src/main/java/cn/hgy/domain/strategy/service/rule/filter/impl/RuleWeightLogicFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Big-Market-infrastructure/src/main/java/cn/hgy/infrastructure/persistent/repository/StrategyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Big-Market-infrastructure/src/main/java/cn/hgy/infrastructure/persistent/repository/StrategyRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/项目笔记.md" beforeDir="false" afterPath="$PROJECT_DIR$/项目笔记.md" afterDir="false" />
     </list>
@@ -38,8 +45,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="AnnotationType" />
+        <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -91,7 +99,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.Application.executor": "Run",
-    "git-widget-placeholder": "250825-raffle-rule-center",
+    "git-widget-placeholder": "250828-rule-tree",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "E:/Code-Project/Java-Project/Big-Market",
@@ -238,6 +246,8 @@
       <workItem from="1755922689303" duration="2983000" />
       <workItem from="1755944939883" duration="4768000" />
       <workItem from="1756132307684" duration="3945000" />
+      <workItem from="1756265175754" duration="3463000" />
+      <workItem from="1756350684043" duration="3413000" />
     </task>
     <task id="LOCAL-00001" summary="fix: 修正">
       <option name="closed" value="true" />
@@ -325,6 +335,7 @@
     <MESSAGE value="feat: 策略概率装配处理&#10;Merge pull request !3 from 黄光宇/250822-stategy-armory" />
     <MESSAGE value="feat: 策略权重装配处理" />
     <MESSAGE value="feat: 抽奖中规则过滤" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 抽奖中规则过滤" />
+    <MESSAGE value="feat: 抽奖前置和中置规则过滤" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 抽奖前置和中置规则过滤" />
   </component>
 </project>

@@ -1,6 +1,6 @@
 package cn.hgy.domain.strategy.model.valobj;
 
-import cn.hgy.domain.strategy.service.rule.factory.DefaultLogicFactory;
+import cn.hgy.domain.strategy.service.rule.filter.factory.DefaultLogicFactory;
 import cn.hgy.types.common.Constants;
 import lombok.*;
 

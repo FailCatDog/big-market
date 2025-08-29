@@ -5,9 +5,10 @@ import cn.hgy.domain.strategy.model.entity.RuleActionEntity;
 import cn.hgy.domain.strategy.model.entity.RuleMatterEntity;
 import cn.hgy.domain.strategy.model.valobj.RuleLogicCheckTypeVO;
 import cn.hgy.domain.strategy.repository.IStrategyRepository;
+import cn.hgy.domain.strategy.service.AbstractRaffleStrategy;
 import cn.hgy.domain.strategy.service.armory.IStrategyDispatch;
 import cn.hgy.domain.strategy.service.rule.ILogicFilter;
-import cn.hgy.domain.strategy.service.rule.factory.DefaultLogicFactory;
+import cn.hgy.domain.strategy.service.rule.filter.factory.DefaultLogicFactory;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -24,7 +25,7 @@ import java.util.Map;
  */
 @Service
 @Slf4j
-public class DefaultRaffleStrategy extends AbstractRaffleStrategy{
+public class DefaultRaffleStrategy extends AbstractRaffleStrategy {
 
     @Resource
     private DefaultLogicFactory logicFactory;
