@@ -17,7 +17,7 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * @Author: 黄光宇
  * @CreateTime: 2025-08-25
- * @Description: 抽奖策略抽象类，定义抽奖的标准流程
+ * @Description: 抽奖策略抽象类，定义抽奖的标准流程 d
  */
 @Slf4j
 public abstract class AbstractRaffleStrategy implements IRaffleStrategy {
