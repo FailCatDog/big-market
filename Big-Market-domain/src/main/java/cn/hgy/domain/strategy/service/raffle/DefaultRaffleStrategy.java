@@ -6,6 +6,7 @@ import cn.hgy.domain.strategy.model.entity.RuleMatterEntity;
 import cn.hgy.domain.strategy.model.valobj.RuleLogicCheckTypeVO;
 import cn.hgy.domain.strategy.model.valobj.RuleTreeVO;
 import cn.hgy.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
+import cn.hgy.domain.strategy.model.valobj.StrategyAwardStockKeyVO;
 import cn.hgy.domain.strategy.repository.IStrategyRepository;
 import cn.hgy.domain.strategy.service.AbstractRaffleStrategy;
 import cn.hgy.domain.strategy.service.armory.IStrategyDispatch;
@@ -55,5 +56,15 @@ public class DefaultRaffleStrategy extends AbstractRaffleStrategy {
         }
         IDecisionTreeEngine treeEngine = defaultTreeFactory.openLogicTree(ruleTreeVO);
         return treeEngine.process(userId, strategyId, awardId);
+    }
+
+    @Override
+    public StrategyAwardStockKeyVO takeQueueValue() throws InterruptedException {
+        return repository.takeQueueValue();
+    }
+
+    @Override
+    public void updateStrategyAwardStock(Long strategyId, Integer awardId) {
+        repository.updateStrategyAwardStock(strategyId, awardId);
     }
 }
