@@ -1,14 +1,17 @@
 package cn.hgy.domain.strategy.service.raffle;
 
+import cn.hgy.domain.strategy.IRaffleAward;
 import cn.hgy.domain.strategy.model.entity.RaffleFactorEntity;
 import cn.hgy.domain.strategy.model.entity.RuleActionEntity;
 import cn.hgy.domain.strategy.model.entity.RuleMatterEntity;
+import cn.hgy.domain.strategy.model.entity.StrategyAwardEntity;
 import cn.hgy.domain.strategy.model.valobj.RuleLogicCheckTypeVO;
 import cn.hgy.domain.strategy.model.valobj.RuleTreeVO;
 import cn.hgy.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 import cn.hgy.domain.strategy.model.valobj.StrategyAwardStockKeyVO;
 import cn.hgy.domain.strategy.repository.IStrategyRepository;
 import cn.hgy.domain.strategy.service.AbstractRaffleStrategy;
+import cn.hgy.domain.strategy.service.IRaffleStock;
 import cn.hgy.domain.strategy.service.armory.IStrategyDispatch;
 import cn.hgy.domain.strategy.service.rule.ILogicFilter;
 import cn.hgy.domain.strategy.service.rule.chain.ILogicChain;
@@ -32,7 +35,7 @@ import java.util.Map;
  */
 @Service
 @Slf4j
-public class DefaultRaffleStrategy extends AbstractRaffleStrategy {
+public class DefaultRaffleStrategy extends AbstractRaffleStrategy implements IRaffleAward, IRaffleStock {
 
     public DefaultRaffleStrategy(IStrategyRepository repository, IStrategyDispatch strategyDispatch, DefaultChainFactory defaultChainFactory, DefaultTreeFactory defaultTreeFactory) {
         super(repository, strategyDispatch, defaultChainFactory, defaultTreeFactory);
@@ -66,5 +69,10 @@ public class DefaultRaffleStrategy extends AbstractRaffleStrategy {
     @Override
     public void updateStrategyAwardStock(Long strategyId, Integer awardId) {
         repository.updateStrategyAwardStock(strategyId, awardId);
+    }
+
+    @Override
+    public List<StrategyAwardEntity> queryRaffleStrategyAwardList(Long strategyId) {
+        return repository.queryStrategyAwardList(strategyId);
     }
 }
