@@ -15,10 +15,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class RaffleAwardEntity {
-    private Long strategyId;
     private Integer awardId;
-    /** 奖品对接标识 */
-    private String awardKey;
     private String awardConfig;
-    private String awardDesc;
+    private Integer sort;
 }

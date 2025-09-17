@@ -58,9 +58,30 @@ public interface IStrategyRepository {
 
     Boolean subtractionAwardStock(String cacheKey);
 
+    /**
+     * 写入奖品库存消费队列
+     * @param strategyAwardStockKeyVO 对象值对象
+     */
     void awardStockConsumeSendQueue(StrategyAwardStockKeyVO strategyAwardStockKeyVO);
 
+    /**
+     * 获取奖品库存消费队列
+     * @return
+     */
     StrategyAwardStockKeyVO takeQueueValue();
 
+    /**
+     * 更新奖品库存消耗
+     * @param strategyId
+     * @param awardId
+     */
     void updateStrategyAwardStock(Long strategyId, Integer awardId);
+
+    /**
+     * 根据策略ID+奖品ID的唯一值组合，查询奖品信息
+     * @param strategyId
+     * @param awardId
+     * @return
+     */
+    StrategyAwardEntity queryStrategyAwardEntity(Long strategyId, Integer awardId);
 }

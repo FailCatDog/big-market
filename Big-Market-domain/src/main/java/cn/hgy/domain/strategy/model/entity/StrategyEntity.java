@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @Author: 黄光宇
@@ -17,6 +19,7 @@ import org.apache.commons.lang3.StringUtils;
 @AllArgsConstructor
 @NoArgsConstructor
 public class StrategyEntity {
+    private static final Logger log = LoggerFactory.getLogger(StrategyEntity.class);
     /** 抽奖策略ID */
     private Long strategyId;
     /** 抽奖策略描述 */
