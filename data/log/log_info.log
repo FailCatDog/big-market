@@ -1238,3 +1238,346 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 25-09-03.20:00:15.006 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
 25-09-03.20:00:19.156 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
 25-09-03.20:00:19.163 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+25-09-03.20:34:57.141 [main            ] INFO  Application            - Starting Application using Java 21.0.1 with PID 22328 (E:\Code-Project\Java-Project\Big-Market\Big-Market-app\target\classes started by HGY in E:\Code-Project\Java-Project\Big-Market)
+25-09-03.20:34:57.141 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-09-03.20:34:57.813 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-09-03.20:34:57.829 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-09-03.20:34:57.860 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+25-09-03.20:34:58.429 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 9001 (http)
+25-09-03.20:34:58.445 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-9001"]
+25-09-03.20:34:58.445 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-09-03.20:34:58.445 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.16]
+25-09-03.20:34:58.493 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-09-03.20:34:58.493 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1322 ms
+25-09-03.20:34:58.800 [main            ] INFO  Version                - Redisson 3.26.0
+25-09-03.20:34:59.000 [redisson-netty-1-5] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-09-03.20:34:59.014 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-09-03.20:34:59.485 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-09-03.20:34:59.515 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-9001"]
+25-09-03.20:34:59.524 [main            ] INFO  TomcatWebServer        - Tomcat started on port 9001 (http) with context path ''
+25-09-03.20:34:59.532 [main            ] INFO  Application            - Started Application in 2.789 seconds (process running for 3.312)
+25-09-03.20:34:59.693 [RMI TCP Connection(6)-192.168.1.7] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-09-03.20:34:59.693 [RMI TCP Connection(6)-192.168.1.7] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-09-03.20:34:59.694 [RMI TCP Connection(5)-192.168.1.7] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+25-09-03.20:34:59.694 [RMI TCP Connection(6)-192.168.1.7] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-09-03.20:34:59.812 [RMI TCP Connection(5)-192.168.1.7] INFO  HikariPool             - Retail_HikariCP - Added connection com.mysql.cj.jdbc.ConnectionImpl@3f5118b0
+25-09-03.20:34:59.816 [RMI TCP Connection(5)-192.168.1.7] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+25-09-03.20:35:00.005 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:35:05.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:35:10.007 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:35:15.006 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:35:16.201 [http-nio-9001-exec-3] INFO  RaffleController       - 抽奖策略装配开始 strategyId：100001
+25-09-03.20:35:16.230 [http-nio-9001-exec-3] INFO  StrategyArmoryDispatch - 查询到策略奖品配置：[StrategyAwardEntity(strategyId=100001, awardId=101, awardTitle=随机积分, awardSubTitle=null, awardCount=80000, awardCountSurplus=80000, awardRate=0.3000, sort=1), StrategyAwardEntity(strategyId=100001, awardId=102, awardTitle=5次使用, awardSubTitle=null, awardCount=10000, awardCountSurplus=10000, awardRate=0.2000, sort=2), StrategyAwardEntity(strategyId=100001, awardId=103, awardTitle=10次使用, awardSubTitle=null, awardCount=5000, awardCountSurplus=5000, awardRate=0.2000, sort=3), StrategyAwardEntity(strategyId=100001, awardId=104, awardTitle=20次使用, awardSubTitle=null, awardCount=4000, awardCountSurplus=4000, awardRate=0.1000, sort=4), StrategyAwardEntity(strategyId=100001, awardId=105, awardTitle=增加gpt-4对话模型, awardSubTitle=null, awardCount=600, awardCountSurplus=600, awardRate=0.1000, sort=5), StrategyAwardEntity(strategyId=100001, awardId=106, awardTitle=增加dall-e-2画图模型, awardSubTitle=null, awardCount=200, awardCountSurplus=200, awardRate=0.0500, sort=6), StrategyAwardEntity(strategyId=100001, awardId=107, awardTitle=增加dall-e-3画图模型, awardSubTitle=抽奖1次后解锁, awardCount=200, awardCountSurplus=200, awardRate=0.0400, sort=7), StrategyAwardEntity(strategyId=100001, awardId=108, awardTitle=增加100次使用, awardSubTitle=抽奖2次后解锁, awardCount=199, awardCountSurplus=199, awardRate=0.0099, sort=8), StrategyAwardEntity(strategyId=100001, awardId=109, awardTitle=解锁全部模型, awardSubTitle=抽奖6次后解锁, awardCount=1, awardCountSurplus=1, awardRate=0.0001, sort=9)]
+25-09-03.20:35:16.246 [http-nio-9001-exec-3] INFO  StrategyArmoryDispatch - 缓存奖品库存完成 strategyId：100001
+25-09-03.20:35:16.302 [http-nio-9001-exec-3] INFO  StrategyRepository     - 从缓存中获取策略数据：StrategyEntity(strategyId=100001, strategyDesc=抽奖策略, ruleModels=rule_blacklist,rule_weight)
+25-09-03.20:35:16.306 [http-nio-9001-exec-3] INFO  StrategyArmoryDispatch - 查询到权重策略配置：StrategyEntity(strategyId=100001, strategyDesc=抽奖策略, ruleModels=rule_blacklist,rule_weight)
+25-09-03.20:35:16.462 [http-nio-9001-exec-3] INFO  RaffleController       - 抽奖策略装配完成 strategyId：100001
+25-09-03.20:35:20.007 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:35:25.011 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:35:26.564 [http-nio-9001-exec-4] INFO  RaffleController       - 抽奖策略装配开始 strategyId：100001
+25-09-03.20:35:26.567 [http-nio-9001-exec-4] INFO  StrategyArmoryDispatch - 查询到策略奖品配置：[StrategyAwardEntity(strategyId=100001, awardId=101, awardTitle=随机积分, awardSubTitle=null, awardCount=80000, awardCountSurplus=80000, awardRate=0.3000, sort=1), StrategyAwardEntity(strategyId=100001, awardId=102, awardTitle=5次使用, awardSubTitle=null, awardCount=10000, awardCountSurplus=10000, awardRate=0.2000, sort=2), StrategyAwardEntity(strategyId=100001, awardId=103, awardTitle=10次使用, awardSubTitle=null, awardCount=5000, awardCountSurplus=5000, awardRate=0.2000, sort=3), StrategyAwardEntity(strategyId=100001, awardId=104, awardTitle=20次使用, awardSubTitle=null, awardCount=4000, awardCountSurplus=4000, awardRate=0.1000, sort=4), StrategyAwardEntity(strategyId=100001, awardId=105, awardTitle=增加gpt-4对话模型, awardSubTitle=null, awardCount=600, awardCountSurplus=600, awardRate=0.1000, sort=5), StrategyAwardEntity(strategyId=100001, awardId=106, awardTitle=增加dall-e-2画图模型, awardSubTitle=null, awardCount=200, awardCountSurplus=200, awardRate=0.0500, sort=6), StrategyAwardEntity(strategyId=100001, awardId=107, awardTitle=增加dall-e-3画图模型, awardSubTitle=抽奖1次后解锁, awardCount=200, awardCountSurplus=200, awardRate=0.0400, sort=7), StrategyAwardEntity(strategyId=100001, awardId=108, awardTitle=增加100次使用, awardSubTitle=抽奖2次后解锁, awardCount=199, awardCountSurplus=199, awardRate=0.0099, sort=8), StrategyAwardEntity(strategyId=100001, awardId=109, awardTitle=解锁全部模型, awardSubTitle=抽奖6次后解锁, awardCount=1, awardCountSurplus=1, awardRate=0.0001, sort=9)]
+25-09-03.20:35:26.577 [http-nio-9001-exec-4] INFO  StrategyArmoryDispatch - 缓存奖品库存完成 strategyId：100001
+25-09-03.20:35:26.616 [http-nio-9001-exec-4] INFO  StrategyRepository     - 从缓存中获取策略数据：StrategyEntity(strategyId=100001, strategyDesc=抽奖策略, ruleModels=rule_blacklist,rule_weight)
+25-09-03.20:35:26.616 [http-nio-9001-exec-4] INFO  StrategyArmoryDispatch - 查询到权重策略配置：StrategyEntity(strategyId=100001, strategyDesc=抽奖策略, ruleModels=rule_blacklist,rule_weight)
+25-09-03.20:35:26.752 [http-nio-9001-exec-4] INFO  RaffleController       - 抽奖策略装配完成 strategyId：100001
+25-09-03.20:35:30.013 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:35:35.006 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:35:40.015 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:35:45.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:35:46.666 [http-nio-9001-exec-5] INFO  RaffleController       - 随机抽奖开始 strategyId: 100001
+25-09-03.20:35:46.672 [http-nio-9001-exec-5] INFO  StrategyRepository     - 从缓存中获取策略数据：StrategyEntity(strategyId=100001, strategyDesc=抽奖策略, ruleModels=rule_blacklist,rule_weight)
+25-09-03.20:35:46.673 [http-nio-9001-exec-5] INFO  BlackListLogicChain    - 抽奖责任链-黑名单开始 userId: system strategyId: 100001 ruleModel: rule_blacklist
+25-09-03.20:35:46.695 [http-nio-9001-exec-5] INFO  BlackListLogicChain    - 抽奖责任链-黑名单放行 userId: system strategyId: 100001 ruleModel: rule_blacklist
+25-09-03.20:35:46.695 [http-nio-9001-exec-5] INFO  RuleWeightLogicChain   - 抽奖责任链-权重开始 userId: system strategyId: 100001 ruleModel: rule_weight
+25-09-03.20:35:46.701 [http-nio-9001-exec-5] INFO  RuleWeightLogicChain   - 抽奖责任链-权重接管 userId: system strategyId: 100001 ruleModel: rule_weight awardId: 103
+25-09-03.20:35:46.702 [http-nio-9001-exec-5] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 system 100001 103 rule_weight
+25-09-03.20:35:46.851 [http-nio-9001-exec-5] INFO  RaffleController       - 随机抽奖完成 strategyId: 100001 response: {"code":"0000","data":{"awardId":103,"awardIndex":3},"info":"成功"}
+25-09-03.20:35:50.009 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:35:55.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:36:00.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:36:05.015 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:36:10.006 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:36:15.002 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:36:20.008 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:36:25.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:36:30.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:36:35.011 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:36:40.007 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:36:45.012 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:36:50.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:36:55.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:37:00.008 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:37:05.011 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:37:10.013 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:37:10.584 [http-nio-9001-exec-8] INFO  RaffleController       - 查询抽奖奖品列表开始 strategyId：100001
+25-09-03.20:37:10.592 [http-nio-9001-exec-8] INFO  RaffleController       - 查询抽奖奖品列表配置完成 strategyId：100001 response: {"code":"0000","data":[{"awardId":101,"awardTitle":"随机积分","sort":1},{"awardId":102,"awardTitle":"5次使用","sort":2},{"awardId":103,"awardTitle":"10次使用","sort":3},{"awardId":104,"awardTitle":"20次使用","sort":4},{"awardId":105,"awardTitle":"增加gpt-4对话模型","sort":5},{"awardId":106,"awardTitle":"增加dall-e-2画图模型","sort":6},{"awardId":107,"awardSubTitle":"抽奖1次后解锁","awardTitle":"增加dall-e-3画图模型","sort":7},{"awardId":108,"awardSubTitle":"抽奖2次后解锁","awardTitle":"增加100次使用","sort":8},{"awardId":109,"awardSubTitle":"抽奖6次后解锁","awardTitle":"解锁全部模型","sort":9}],"info":"成功"}
+25-09-03.20:37:15.012 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:37:20.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:37:21.158 [http-nio-9001-exec-9] INFO  RaffleController       - 随机抽奖开始 strategyId: 100001
+25-09-03.20:37:21.160 [http-nio-9001-exec-9] INFO  StrategyRepository     - 从缓存中获取策略数据：StrategyEntity(strategyId=100001, strategyDesc=抽奖策略, ruleModels=rule_blacklist,rule_weight)
+25-09-03.20:37:21.160 [http-nio-9001-exec-9] INFO  BlackListLogicChain    - 抽奖责任链-黑名单开始 userId: system strategyId: 100001 ruleModel: rule_blacklist
+25-09-03.20:37:21.164 [http-nio-9001-exec-9] INFO  BlackListLogicChain    - 抽奖责任链-黑名单放行 userId: system strategyId: 100001 ruleModel: rule_blacklist
+25-09-03.20:37:21.164 [http-nio-9001-exec-9] INFO  RuleWeightLogicChain   - 抽奖责任链-权重开始 userId: system strategyId: 100001 ruleModel: rule_weight
+25-09-03.20:37:21.170 [http-nio-9001-exec-9] INFO  RuleWeightLogicChain   - 抽奖责任链-权重接管 userId: system strategyId: 100001 ruleModel: rule_weight awardId: 103
+25-09-03.20:37:21.170 [http-nio-9001-exec-9] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 system 100001 103 rule_weight
+25-09-03.20:37:21.171 [http-nio-9001-exec-9] INFO  RaffleController       - 随机抽奖完成 strategyId: 100001 response: {"code":"0000","data":{"awardId":103,"awardIndex":3},"info":"成功"}
+25-09-03.20:37:25.006 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:37:30.005 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:37:35.004 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:37:40.006 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:37:45.007 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:37:50.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:37:55.002 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:38:00.002 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:38:05.007 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:38:10.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:38:15.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:38:20.007 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:38:25.008 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:38:30.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:38:35.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:38:40.005 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:38:45.011 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:38:50.005 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:38:55.011 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:39:00.011 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:39:05.011 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:39:10.014 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:39:15.012 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:39:20.011 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:39:25.006 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:39:30.011 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:39:35.016 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:39:40.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:39:45.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:39:50.010 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:39:55.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:40:00.011 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:40:05.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:40:10.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:40:15.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:40:20.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:40:25.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:40:30.010 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:40:35.005 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:40:40.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:40:45.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:40:50.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:40:55.011 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:41:00.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:41:05.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:41:10.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:41:15.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:41:20.013 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:41:25.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:41:30.002 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:41:35.013 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:41:40.012 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:41:45.002 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:41:50.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:41:55.007 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:42:00.009 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:42:05.007 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:42:10.012 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:42:15.005 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:42:20.008 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:42:25.005 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:42:30.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:42:35.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:42:40.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:42:45.005 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:42:50.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:42:55.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:43:00.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:43:05.005 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:43:10.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:43:15.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:43:20.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:43:25.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:43:30.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:43:35.006 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:43:40.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:43:45.006 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:43:50.006 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:43:55.006 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:44:00.006 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:44:05.006 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:44:10.006 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:44:15.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:44:20.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:44:25.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:44:30.005 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:44:35.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:44:40.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:44:45.002 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:44:50.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:44:55.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:45:00.011 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:45:05.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:45:10.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:45:15.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:45:20.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:45:25.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:45:30.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:45:35.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:45:40.006 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:45:45.005 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:45:50.006 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:45:55.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:46:00.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:46:05.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:46:10.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:46:15.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:46:20.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:46:25.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:46:30.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:46:35.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:46:40.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:46:45.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:46:50.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:46:55.006 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:47:00.006 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:47:05.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:47:10.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:47:15.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:47:20.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:47:25.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:47:30.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:47:35.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:47:40.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:47:45.006 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:47:50.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:47:55.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:48:00.002 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:48:05.006 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:48:10.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:48:15.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:48:20.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:48:25.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:48:30.012 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:48:35.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:48:40.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:48:45.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:48:50.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:48:55.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:49:00.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:49:05.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:49:10.006 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:49:15.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:49:20.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:49:25.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:49:30.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:49:35.002 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:49:40.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:49:45.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:49:50.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:49:55.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:50:00.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:50:05.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:50:10.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:50:15.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:50:20.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:50:25.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:50:30.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:50:35.004 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:50:40.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:50:45.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:50:50.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:50:55.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:51:00.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:51:05.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:51:10.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:51:15.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:51:20.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:51:25.007 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:51:30.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:51:35.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:51:40.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:51:45.008 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:51:50.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:51:55.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:52:00.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:52:05.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:52:10.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:52:15.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:52:20.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:52:25.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:52:30.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:52:35.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:52:40.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:52:45.008 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:52:50.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:52:55.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:53:00.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:53:05.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:53:10.008 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:53:15.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:53:20.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:53:25.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:53:30.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:53:35.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:53:40.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:53:45.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:53:50.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:53:55.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:54:00.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:54:05.008 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:54:10.009 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:54:15.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:54:20.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:54:25.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:54:30.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:54:35.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:54:42.202 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:54:45.002 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:54:50.002 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:54:55.002 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:55:00.002 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:55:05.002 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:55:10.002 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:55:15.002 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:55:20.002 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:55:25.002 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:55:30.002 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:55:35.002 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:55:40.012 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:55:45.002 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:55:50.002 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:55:55.002 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:56:00.002 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:56:05.002 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:56:10.007 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:56:15.007 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:56:20.008 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:56:25.002 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:56:30.002 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:56:35.004 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:56:40.002 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:56:45.002 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:56:50.007 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:56:55.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:57:00.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:57:05.008 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:57:10.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:57:15.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:57:20.009 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:57:25.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:57:30.002 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:57:35.010 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:57:40.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:57:45.007 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:57:50.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:57:55.002 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:58:00.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:58:05.008 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:58:10.008 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:58:15.003 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:58:20.009 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:58:25.000 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:58:30.009 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:58:35.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:58:40.001 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:58:45.008 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:58:50.006 [scheduling-1    ] INFO  UpdateAwardCount       - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-03.20:58:51.145 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+25-09-03.20:58:51.152 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
