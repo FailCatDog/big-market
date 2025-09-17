@@ -40,7 +40,7 @@ public class RuleStockLogicTreeNode implements ILogicTreeNode {
                     .ruleLogicCheckType(RuleLogicCheckTypeVO.TAKE_OVER)
                     .strategyAwardVO(DefaultTreeFactory.StrategyAwardVO.builder()
                             .awardId(awardId)
-                            .awardRuleValue("") // TODO
+                            .awardRuleValue(ruleValue)
                             .build())
                     .build();
         }
