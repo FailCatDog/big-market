@@ -127,6 +127,17 @@
                 <artifactId>redisson-spring-boot-starter</artifactId>
                 <version>3.26.0</version>
             </dependency>
+            <!-- ShardingSphere -->
+            <dependency>
+                <groupId>org.apache.shardingsphere</groupId>
+                <artifactId>shardingsphere-jdbc-core-spring-boot-starter</artifactId>
+                <version>5.2.0</version>
+            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>cn.bugstack.middleware</groupId>-->
+<!--                <artifactId>db-router-spring-boot-starter</artifactId>-->
+<!--                <version>1.0.2</version>-->
+<!--            </dependency>-->
 
             <!-- 工程模块 -->
             <dependency>
