@@ -1,5 +1,6 @@
 package cn.hgy.infrastructure.persistent.dao;
 
+import cn.hgy.infrastructure.persistent.po.RaffleActivity;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -9,4 +10,5 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface IRaffleActivityDao {
+    RaffleActivity queryRaffleActivityByActivityId(Long activityId);
 }
