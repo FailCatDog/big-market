@@ -12,23 +12,32 @@ thread:
         block-queue-size: 5000
         policy: CallerRunsPolicy
 
-# 数据库配置；启动时配置数据库资源信息
+# ShardingSphere 分库分表配置（测试环境使用单库）
 spring:
-  datasource:
-    username: root
-    password: 123456
-    url: jdbc:mysql://127.0.0.1:13306/big_market?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    type: com.zaxxer.hikari.HikariDataSource
-    hikari:
-      pool-name: Retail_HikariCP
-      minimum-idle: 15 #最小空闲连接数量
-      idle-timeout: 180000 #空闲连接存活最大时间，默认600000（10分钟）
-      maximum-pool-size: 25 #连接池最大连接数，默认是10
-      auto-commit: true  #此属性控制从池返回的连接的默认自动提交行为,默认值：true
-      max-lifetime: 1800000 #此属性控制池中连接的最长生命周期，值0表示无限生命周期，默认1800000即30分钟
-      connection-timeout: 30000 #数据库连接超时时间,默认30秒，即30000
-      connection-test-query: SELECT 1
+  shardingsphere:
+    # 数据源配置
+    datasource:
+      names: ds0
+      # 测试环境只使用单个数据源
+      ds0:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://127.0.0.1:13306/big_market?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
+        username: root
+        password: 123456
+        hikari:
+          pool-name: Retail_HikariCP
+          minimum-idle: 15
+          idle-timeout: 180000
+          maximum-pool-size: 25
+          auto-commit: true
+          max-lifetime: 1800000
+          connection-timeout: 30000
+          connection-test-query: SELECT 1
+
+    # 属性配置
+    props:
+      sql-show: true # 显示SQL日志
 
 # Redis
 redis:
