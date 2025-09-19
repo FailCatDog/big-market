@@ -25,23 +25,103 @@ thread:
         block-queue-size: 5000
         policy: CallerRunsPolicy
 
-# 数据库配置；启动时配置数据库资源信息
+# ShardingSphere 分库分表配置
 spring:
-  datasource:
-    username: root
-    password: 123456
-    url: jdbc:mysql://127.0.0.1:13306/big_market?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    type: com.zaxxer.hikari.HikariDataSource
-    hikari:
-      pool-name: Retail_HikariCP
-      minimum-idle: 15 #最小空闲连接数量
-      idle-timeout: 180000 #空闲连接存活最大时间，默认600000（10分钟）
-      maximum-pool-size: 25 #连接池最大连接数，默认是10
-      auto-commit: true  #此属性控制从池返回的连接的默认自动提交行为,默认值：true
-      max-lifetime: 1800000 #此属性控制池中连接的最长生命周期，值0表示无限生命周期，默认1800000即30分钟
-      connection-timeout: 30000 #数据库连接超时时间,默认30秒，即30000
-      connection-test-query: SELECT 1
+  shardingsphere:
+    # 数据源配置
+    datasource:
+      names: ds0,ds1,ds2
+      # 默认数据源（主库）
+      ds0:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://127.0.0.1:13306/big_market?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC&useSSL=true
+        username: root
+        password: Hgy@123
+        hikari:
+          pool-name: Retail_HikariCP_DS0
+          minimum-idle: 15
+          idle-timeout: 180000
+          maximum-pool-size: 25
+          auto-commit: true
+          max-lifetime: 1800000
+          connection-timeout: 30000
+          connection-test-query: SELECT 1
+      # 分库1
+      ds1:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://127.0.0.1:13306/big_market_01?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC&useSSL=true
+        username: root
+        password: 123456
+        hikari:
+          pool-name: Retail_HikariCP_DS1
+          minimum-idle: 15
+          idle-timeout: 180000
+          maximum-pool-size: 25
+          auto-commit: true
+          max-lifetime: 1800000
+          connection-timeout: 30000
+          connection-test-query: SELECT 1
+      # 分库2
+      ds2:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://127.0.0.1:13306/big_market_02?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC&useSSL=true
+        username: root
+        password: 123456
+        hikari:
+          pool-name: Retail_HikariCP_DS2
+          minimum-idle: 15
+          idle-timeout: 180000
+          maximum-pool-size: 25
+          auto-commit: true
+          max-lifetime: 1800000
+          connection-timeout: 30000
+          connection-test-query: SELECT 1
+
+    # 分片规则配置
+    rules:
+      sharding:
+        # 分库策略
+        default-database-strategy:
+          standard:
+            sharding-column: userId
+            sharding-algorithm-name: database-inline
+        tables:
+          raffle_activity_account:
+            actual-data-nodes: ds$->{1..2}.user_raffle_order_$->{0..3}
+            table-strategy:
+              standard:
+                sharding-column: userId
+                sharding-algorithm-name: table-inline
+          raffle_activity_account_flow:
+            actual-data-nodes: ds$->{1..2}.user_behavior_rebate_order_$->{0..3}
+            table-strategy:
+              standard:
+                sharding-column: userId
+                sharding-algorithm-name: table-inline
+          raffle_activity_order:
+            actual-data-nodes: ds$->{1..2}.user_behavior_rebate_order_$->{0..3}
+            table-strategy:
+              standard:
+                sharding-column: userId
+                sharding-algorithm-name: table-inline
+
+        # 分片算法配置
+        sharding-algorithms:
+          database-inline:
+            type: INLINE
+            props:
+              algorithm-expression: ds$->{userId % 2 + 1}
+          table-inline:
+            type: INLINE
+            props:
+              algorithm-expression: $->{table}_$->{userId % 4}
+
+    # 属性配置
+    props:
+      sql-show: true # 显示SQL日志
 
 # Redis
 redis:
