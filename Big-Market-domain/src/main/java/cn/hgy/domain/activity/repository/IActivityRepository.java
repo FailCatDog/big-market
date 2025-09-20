@@ -4,6 +4,9 @@ import cn.hgy.domain.activity.model.aggregate.CreateOrderAggregate;
 import cn.hgy.domain.activity.model.entity.ActivityCountEntity;
 import cn.hgy.domain.activity.model.entity.ActivityEntity;
 import cn.hgy.domain.activity.model.entity.ActivitySkuEntity;
+import cn.hgy.domain.activity.model.valobj.ActivitySkuStockKeyVO;
+
+import java.util.Date;
 
 /**
  * @Author: 黄光宇
@@ -18,4 +21,18 @@ public interface IActivityRepository {
     ActivityCountEntity queryRaffleActivityCountByActivityCountId(Long activityCountId);
 
     void doSaveOrder(CreateOrderAggregate createOrderAggregate);
+
+    void cacheActivitySkuStockCount(String cacheKey, Integer stockCount);
+
+    boolean subtractionActivitySkuStock(Long sku, String cacheKey, Date endDateTime);
+
+    void activitySkuStockConsumeSendQueue(ActivitySkuStockKeyVO build);
+
+    ActivitySkuStockKeyVO takeQueueValue();
+
+    void clearQueueValue();
+
+    void updateActivitySkuStock(Long sku);
+
+    void clearActivitySkuStock(Long sku);
 }
