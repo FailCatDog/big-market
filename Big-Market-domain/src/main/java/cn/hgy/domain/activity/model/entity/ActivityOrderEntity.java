@@ -6,7 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.sql.Date;
+import java.util.Date;
+
 
 /**
  * @Author: 黄光宇
@@ -22,6 +23,11 @@ public class ActivityOrderEntity {
      * 用户ID
      */
     private String userId;
+
+    /**
+     * Sku
+     */
+    private Long sku;
 
     /**
      * 活动ID
@@ -67,4 +73,9 @@ public class ActivityOrderEntity {
      * 订单状态
      */
     private OrderStateVO state;
+
+    /**
+     * 业务防重ID
+     */
+    private String outBusinessNo;
 }
