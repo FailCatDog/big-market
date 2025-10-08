@@ -1,75 +1,22 @@
-25-09-20.13:10:05.665 [main            ] INFO  Application            - Starting Application using Java 21.0.1 with PID 17300 (E:\Code-Project\Java-Project\Big-Market\Big-Market-app\target\classes started by HGY in E:\Code-Project\Java-Project\Big-Market)
-25-09-20.13:10:05.666 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-09-20.13:10:06.515 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-25-09-20.13:10:06.517 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-25-09-20.13:10:06.549 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
-25-09-20.13:10:07.103 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 9001 (http)
-25-09-20.13:10:07.110 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-9001"]
-25-09-20.13:10:07.111 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-09-20.13:10:07.111 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.16]
-25-09-20.13:10:07.199 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-09-20.13:10:07.199 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1367 ms
-25-09-20.13:10:07.553 [main            ] INFO  Version                - Redisson 3.26.0
-25-09-20.13:10:07.813 [redisson-netty-1-5] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
-25-09-20.13:10:07.828 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
-25-09-20.13:10:08.127 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'activitySkuStockZeroCustomer': Injection of autowired dependencies failed
-25-09-20.13:10:08.145 [main            ] INFO  StandardService        - Stopping service [Tomcat]
-25-09-20.13:10:08.182 [main            ] INFO  ConditionEvaluationReportLogger - 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-25-09-20.13:10:08.192 [main            ] ERROR SpringApplication      - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'activitySkuStockZeroCustomer': Injection of autowired dependencies failed
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:499)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:946)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
-	at cn.hgy.Application.main(Application.java:16)
-Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.rabbitmq.topic.activity_sku_stock_zero' in value "${spring.rabbitmq.topic.activity_sku_stock_zero}"
-	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180)
-	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
-	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239)
-	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
-	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:200)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:921)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1372)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:769)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:752)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:493)
-	... 17 common frames omitted
-25-09-20.13:12:58.444 [main            ] INFO  Application            - Starting Application using Java 21.0.1 with PID 21056 (E:\Code-Project\Java-Project\Big-Market\Big-Market-app\target\classes started by HGY in E:\Code-Project\Java-Project\Big-Market)
-25-09-20.13:12:58.445 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-09-20.13:12:59.196 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-25-09-20.13:12:59.197 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-25-09-20.13:12:59.223 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
-25-09-20.13:12:59.664 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 9001 (http)
-25-09-20.13:12:59.669 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-9001"]
-25-09-20.13:12:59.670 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-09-20.13:12:59.670 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.16]
-25-09-20.13:12:59.742 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-09-20.13:12:59.742 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1155 ms
-25-09-20.13:13:00.057 [main            ] INFO  Version                - Redisson 3.26.0
-25-09-20.13:13:00.241 [redisson-netty-1-5] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
-25-09-20.13:13:00.258 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
-25-09-20.13:13:00.848 [main            ] INFO  StdSchedulerFactory    - Using default implementation for ThreadExecutor
-25-09-20.13:13:00.858 [main            ] INFO  SchedulerSignalerImpl  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-25-09-20.13:13:00.858 [main            ] INFO  QuartzScheduler        - Quartz Scheduler v.2.3.2 created.
-25-09-20.13:13:00.858 [main            ] INFO  RAMJobStore            - RAMJobStore initialized.
-25-09-20.13:13:00.859 [main            ] INFO  QuartzScheduler        - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+25-09-29.19:24:54.965 [main            ] INFO  Application            - Starting Application using Java 21.0.1 with PID 14772 (E:\Code-Project\Java-Project\Big-Market\Big-Market-app\target\classes started by HGY in E:\Code-Project\Java-Project\Big-Market)
+25-09-29.19:24:54.965 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-09-29.19:24:55.898 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-09-29.19:24:55.900 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-09-29.19:24:55.930 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+25-09-29.19:24:56.508 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port 9001 (http)
+25-09-29.19:24:56.514 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-9001"]
+25-09-29.19:24:56.515 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-09-29.19:24:56.515 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/10.1.16]
+25-09-29.19:24:56.594 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-09-29.19:24:56.594 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1433 ms
+25-09-29.19:24:56.969 [main            ] INFO  Version                - Redisson 3.26.0
+25-09-29.19:24:57.183 [redisson-netty-1-5] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-09-29.19:24:57.196 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+25-09-29.19:24:57.844 [main            ] INFO  StdSchedulerFactory    - Using default implementation for ThreadExecutor
+25-09-29.19:24:57.852 [main            ] INFO  SchedulerSignalerImpl  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+25-09-29.19:24:57.852 [main            ] INFO  QuartzScheduler        - Quartz Scheduler v.2.3.2 created.
+25-09-29.19:24:57.852 [main            ] INFO  RAMJobStore            - RAMJobStore initialized.
+25-09-29.19:24:57.852 [main            ] INFO  QuartzScheduler        - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -77,29 +24,371 @@ Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'sp
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-25-09-20.13:13:00.859 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-25-09-20.13:13:00.859 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler version: 2.3.2
-25-09-20.13:13:00.859 [main            ] INFO  QuartzScheduler        - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@5e405eaf
-25-09-20.13:13:01.021 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-25-09-20.13:13:01.086 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-9001"]
-25-09-20.13:13:01.100 [main            ] INFO  TomcatWebServer        - Tomcat started on port 9001 (http) with context path ''
-25-09-20.13:13:01.104 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [127.0.0.1:5672]
-25-09-20.13:13:01.204 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#e08d871:0/SimpleConnection@2e871e93 [delegate=amqp://admin@127.0.0.1:5672/, localPort=62423]
-25-09-20.13:13:01.300 [main            ] INFO  SchedulerFactoryBean   - Starting Quartz Scheduler now
-25-09-20.13:13:01.300 [main            ] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED started.
-25-09-20.13:13:01.309 [main            ] INFO  Application            - Started Application in 3.193 seconds (process running for 3.747)
-25-09-20.13:13:01.819 [RMI TCP Connection(2)-10.34.116.119] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
-25-09-20.13:13:01.819 [RMI TCP Connection(2)-10.34.116.119] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
-25-09-20.13:13:01.820 [RMI TCP Connection(2)-10.34.116.119] INFO  DispatcherServlet      - Completed initialization in 1 ms
-25-09-20.13:13:01.821 [RMI TCP Connection(1)-10.34.116.119] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-09-20.13:13:02.021 [RMI TCP Connection(1)-10.34.116.119] INFO  HikariPool             - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:5b970de7-a779-4754-8b00-b70ceb473e55 user=SA
-25-09-20.13:13:02.023 [RMI TCP Connection(1)-10.34.116.119] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-09-20.13:13:04.156 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-25-09-20.13:13:04.156 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
-25-09-20.13:13:04.329 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
-25-09-20.13:13:04.339 [SpringApplicationShutdownHook] INFO  SchedulerFactoryBean   - Shutting down Quartz Scheduler
-25-09-20.13:13:04.339 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-25-09-20.13:13:04.339 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-25-09-20.13:13:04.339 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
-25-09-20.13:13:04.352 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-09-20.13:13:04.353 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-09-29.19:24:57.853 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+25-09-29.19:24:57.853 [main            ] INFO  StdSchedulerFactory    - Quartz scheduler version: 2.3.2
+25-09-29.19:24:57.853 [main            ] INFO  QuartzScheduler        - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@6b8a9e1
+25-09-29.19:24:58.010 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-09-29.19:24:58.073 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-9001"]
+25-09-29.19:24:58.088 [main            ] INFO  TomcatWebServer        - Tomcat started on port 9001 (http) with context path ''
+25-09-29.19:24:58.091 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [127.0.0.1:5672]
+25-09-29.19:24:58.149 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#49654a35:0/SimpleConnection@515b7335 [delegate=amqp://admin@127.0.0.1:5672/, localPort=64774]
+25-09-29.19:24:58.184 [main            ] INFO  SchedulerFactoryBean   - Starting Quartz Scheduler now
+25-09-29.19:24:58.185 [main            ] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+25-09-29.19:24:58.192 [main            ] INFO  Application            - Started Application in 3.606 seconds (process running for 4.538)
+25-09-29.19:24:58.739 [RMI TCP Connection(3)-10.34.46.28] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-09-29.19:24:58.739 [RMI TCP Connection(2)-10.34.46.28] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-09-29.19:24:58.739 [RMI TCP Connection(2)-10.34.46.28] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-09-29.19:24:58.740 [RMI TCP Connection(2)-10.34.46.28] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-09-29.19:24:58.918 [RMI TCP Connection(3)-10.34.46.28] INFO  HikariPool             - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:887b4ffb-bb55-4659-85ff-246aa1da3561 user=SA
+25-09-29.19:24:58.919 [RMI TCP Connection(3)-10.34.46.28] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-09-29.19:25:00.011 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:25:00.016 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存 【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:25:00.017 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+25-09-29.19:25:05.001 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:25:05.005 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存 【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:25:05.005 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+25-09-29.19:25:10.000 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:25:10.005 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存 【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:25:10.005 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+25-09-29.19:25:15.000 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存 【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:25:15.000 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+25-09-29.19:25:15.001 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:25:20.001 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存 【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:25:20.001 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+25-09-29.19:25:20.002 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:25:25.000 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:25:25.003 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存 【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:25:25.005 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+25-09-29.19:25:30.000 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存 【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:25:30.000 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+25-09-29.19:25:30.001 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:25:35.000 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存 【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:25:35.000 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+25-09-29.19:25:35.001 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:25:40.000 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:25:40.002 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存 【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:25:40.002 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+25-09-29.19:25:45.000 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存 【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:25:45.000 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+25-09-29.19:25:45.000 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:25:50.000 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:25:50.002 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存 【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:25:50.002 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+25-09-29.19:25:55.000 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:25:55.003 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存 【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:25:55.003 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+25-09-29.19:26:00.001 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:26:00.003 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存 【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:26:00.003 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+25-09-29.19:26:05.000 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存 【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:26:05.000 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+25-09-29.19:26:05.001 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:26:10.000 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:26:10.003 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存 【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:26:10.003 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+25-09-29.19:26:15.001 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存 【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:26:15.001 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+25-09-29.19:26:15.002 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:26:20.000 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:26:20.002 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存 【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:26:20.003 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+25-09-29.19:26:25.000 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:26:25.003 [scheduling-1    ] INFO  UpdateActivitySkuStockJob - 定时任务，更新活动sku库存 【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+25-09-29.19:26:25.003 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+25-09-29.19:26:29.932 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+25-09-29.19:26:29.933 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+25-09-29.19:26:30.278 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+25-09-29.19:26:30.289 [SpringApplicationShutdownHook] INFO  SchedulerFactoryBean   - Shutting down Quartz Scheduler
+25-09-29.19:26:30.289 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+25-09-29.19:26:30.289 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+25-09-29.19:26:30.289 [SpringApplicationShutdownHook] INFO  QuartzScheduler        - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+25-09-29.19:26:30.300 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-09-29.19:26:30.301 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
