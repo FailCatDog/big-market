@@ -117,6 +117,18 @@ spring:
     props:
       sql-show: true # 显示SQL日志
 
+  # Spring 配置： RabbitMq
+  rabbitmq:
+    addresses: 127.0.0.1
+    port: 5672
+    username: admin
+    password: admin
+    listener:
+      simple:
+        prefetch: 1 # 每次投递N个消息，消费完在投递N个
+      topic:
+        activity_sku_stock_zero: activity_sku_stock_zero
+
 # Redis
 redis:
   sdk:

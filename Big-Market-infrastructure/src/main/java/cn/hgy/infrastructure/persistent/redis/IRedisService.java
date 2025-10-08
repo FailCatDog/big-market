@@ -2,6 +2,8 @@ package cn.hgy.infrastructure.persistent.redis;
 
 import org.redisson.api.*;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * @Author: 黄光宇
  * @CreateTime: 2025-08-22
@@ -250,4 +252,6 @@ public interface IRedisService {
     void setAtomicLong(String cacheKey, Integer value);
 
     Boolean setNx(String lockKey);
+
+    Boolean setNx(String key, long expireMillis, TimeUnit timeUnit);
 }
