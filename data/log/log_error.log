@@ -1,5 +1,5 @@
-25-09-29.19:25:00.017 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
-java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+25-09-29.19:25:00.017 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
 	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -15,8 +15,8 @@ java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IS
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-25-09-29.19:25:05.005 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
-java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+25-09-29.19:25:05.005 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
 	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -32,8 +32,8 @@ java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IS
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-25-09-29.19:25:10.005 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
-java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+25-09-29.19:25:10.005 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
 	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -49,8 +49,8 @@ java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IS
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-25-09-29.19:25:15.000 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
-java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+25-09-29.19:25:15.000 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
 	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -66,8 +66,8 @@ java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IS
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-25-09-29.19:25:20.001 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
-java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+25-09-29.19:25:20.001 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
 	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -83,8 +83,8 @@ java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IS
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-25-09-29.19:25:25.005 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
-java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+25-09-29.19:25:25.005 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
 	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -100,8 +100,8 @@ java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IS
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-25-09-29.19:25:30.000 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
-java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+25-09-29.19:25:30.000 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
 	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -117,8 +117,8 @@ java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IS
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-25-09-29.19:25:35.000 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
-java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+25-09-29.19:25:35.000 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
 	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -134,8 +134,8 @@ java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IS
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-25-09-29.19:25:40.002 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
-java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+25-09-29.19:25:40.002 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
 	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -151,8 +151,8 @@ java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IS
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-25-09-29.19:25:45.000 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
-java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+25-09-29.19:25:45.000 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
 	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -168,8 +168,8 @@ java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IS
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-25-09-29.19:25:50.002 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
-java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+25-09-29.19:25:50.002 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
 	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -185,8 +185,8 @@ java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IS
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-25-09-29.19:25:55.003 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
-java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+25-09-29.19:25:55.003 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
 	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -202,8 +202,8 @@ java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IS
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-25-09-29.19:26:00.003 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
-java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+25-09-29.19:26:00.003 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
 	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -219,8 +219,8 @@ java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IS
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-25-09-29.19:26:05.000 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
-java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+25-09-29.19:26:05.000 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
 	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -236,8 +236,8 @@ java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IS
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-25-09-29.19:26:10.003 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
-java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+25-09-29.19:26:10.003 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
 	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -253,8 +253,8 @@ java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IS
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-25-09-29.19:26:15.001 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
-java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+25-09-29.19:26:15.001 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
 	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -270,8 +270,8 @@ java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IS
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-25-09-29.19:26:20.003 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
-java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+25-09-29.19:26:20.003 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
 	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -287,8 +287,8 @@ java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IS
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-25-09-29.19:26:25.003 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
-java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.ISkuStock.takeQueueValue()" because "this.skuStock" is null
+25-09-29.19:26:25.003 [scheduling-1    ] ERROR UpdateActivitySkuStockJob - 定时任务，更新活动sku库存失败，原因：Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
+java.lang.NullPointerException: Cannot invoke "cn.hgy.domain.activity.service.IRaffleActivitySkuStockService.takeQueueValue()" because "this.skuStock" is null
 	at cn.hgy.trigger.job.UpdateActivitySkuStockJob.exec(UpdateActivitySkuStockJob.java:25)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)

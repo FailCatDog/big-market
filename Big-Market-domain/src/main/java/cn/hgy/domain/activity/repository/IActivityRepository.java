@@ -1,9 +1,8 @@
 package cn.hgy.domain.activity.repository;
 
 import cn.hgy.domain.activity.model.aggregate.CreateOrderAggregate;
-import cn.hgy.domain.activity.model.entity.ActivityCountEntity;
-import cn.hgy.domain.activity.model.entity.ActivityEntity;
-import cn.hgy.domain.activity.model.entity.ActivitySkuEntity;
+import cn.hgy.domain.activity.model.aggregate.CreatePartakeOrderAggregate;
+import cn.hgy.domain.activity.model.entity.*;
 import cn.hgy.domain.activity.model.valobj.ActivitySkuStockKeyVO;
 
 import java.util.Date;
@@ -35,4 +34,14 @@ public interface IActivityRepository {
     void updateActivitySkuStock(Long sku);
 
     void clearActivitySkuStock(Long sku);
+
+    void saveCreatePartakeOrderAggregate(CreatePartakeOrderAggregate createPartakeOrderAggregate);
+
+    ActivityAccountDayEntity queryActivityAccountDayByUserId(String userId, Long activityId, String day);
+
+    UserRaffleOrderEntity queryNoUsedRaffleOrder(PartakeRaffleActivityEntity partakeRaffleActivityEntity);
+
+    ActivityAccountEntity queryActivityAccountByUserId(String userId, Long activityId);
+
+    ActivityAccountMonthEntity queryActivityAccountMonthByUserId(String userId, Long activityId, String month);
 }

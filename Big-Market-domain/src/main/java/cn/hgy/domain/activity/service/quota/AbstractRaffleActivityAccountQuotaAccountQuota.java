@@ -1,10 +1,11 @@
-package cn.hgy.domain.activity.service;
+package cn.hgy.domain.activity.service.quota;
 
 import cn.hgy.domain.activity.model.aggregate.CreateOrderAggregate;
 import cn.hgy.domain.activity.model.entity.*;
 import cn.hgy.domain.activity.repository.IActivityRepository;
-import cn.hgy.domain.activity.service.rule.IActionChain;
-import cn.hgy.domain.activity.service.rule.factory.DefaultActivityChainFactory;
+import cn.hgy.domain.activity.service.IRaffleActivityAccountQuotaService;
+import cn.hgy.domain.activity.service.quota.rule.IActionChain;
+import cn.hgy.domain.activity.service.quota.rule.factory.DefaultActivityChainFactory;
 import cn.hgy.types.enums.ResponseCode;
 import cn.hgy.types.exception.AppException;
 import com.alibaba.fastjson2.JSON;
@@ -17,11 +18,11 @@ import org.apache.commons.lang3.StringUtils;
  * @Description:
  */
 @Slf4j
-public abstract class AbstractRaffleActivity extends RaffleActivitySupport implements IRaffleOrder {
+public abstract class AbstractRaffleActivityAccountQuotaAccountQuota extends RaffleActivityAccountQuotaSupport implements IRaffleActivityAccountQuotaService {
 
     protected IActivityRepository activityRepository;
 
-    public AbstractRaffleActivity(IActivityRepository activityRepository, DefaultActivityChainFactory defaultActivityChainFactory) {
+    public AbstractRaffleActivityAccountQuotaAccountQuota(IActivityRepository activityRepository, DefaultActivityChainFactory defaultActivityChainFactory) {
         super(activityRepository, defaultActivityChainFactory);
     }
 
@@ -40,7 +41,7 @@ public abstract class AbstractRaffleActivity extends RaffleActivitySupport imple
     }
 
     @Override
-    public String createSkuRechargeOrder(SkuRechargeEntity skuRechargeEntity) {
+    public String createOrder(SkuRechargeEntity skuRechargeEntity) {
         // 1. 参数校验
         String userId = skuRechargeEntity.getUserId();
         Long sku = skuRechargeEntity.getSku();
