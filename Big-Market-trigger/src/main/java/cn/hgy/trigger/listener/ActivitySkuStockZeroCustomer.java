@@ -1,6 +1,6 @@
 package cn.hgy.trigger.listener;
 
-import cn.hgy.domain.activity.service.ISkuStock;
+import cn.hgy.domain.activity.service.IRaffleActivitySkuStockService;
 import cn.hgy.types.event.BaseEvent;
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.TypeReference;
@@ -24,7 +24,7 @@ public class ActivitySkuStockZeroCustomer {
     @Value("${spring.rabbitmq.listener.topic.activity_sku_stock_zero}")
     private String topic;
 
-    private final ISkuStock skuStock;
+    private final IRaffleActivitySkuStockService skuStock;
 
     @RabbitListener(queuesToDeclare = @Queue(value = "activity_sku_stock_zero"))
     public void listener(String message) {

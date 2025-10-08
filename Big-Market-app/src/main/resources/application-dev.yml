@@ -95,8 +95,26 @@ spring:
               standard:
                 sharding-column: userId
                 sharding-algorithm-name: table-inline
+          raffle_activity_account_month:
+            actual-data-nodes: ds$->{1..2}.raffle_activity_account_month_$->{0..3}
+            table-strategy:
+              standard:
+                sharding-column: userId
+                sharding-algorithm-name: table-inline
+          raffle_activity_account_day:
+            actual-data-nodes: ds$->{1..2}.raffle_activity_account_day_$->{0..3}
+            table-strategy:
+              standard:
+                sharding-column: userId
+                sharding-algorithm-name: table-inline
           raffle_activity_order:
             actual-data-nodes: ds$->{1..2}.raffle_activity_order_$->{0..3}
+            table-strategy:
+              standard:
+                sharding-column: userId
+                sharding-algorithm-name: table-inline
+          user_raffle_order:
+            actual-data-nodes: ds$->{1..2}.user_raffle_order_$->{0..3}
             table-strategy:
               standard:
                 sharding-column: userId
