@@ -1,4 +1,4 @@
-package cn.hgy.domain.activity.service.rule;
+package cn.hgy.domain.activity.service.quota.rule;
 
 /**
  * @Author: 黄光宇

@@ -1,10 +1,10 @@
-package cn.hgy.domain.activity.service.rule.impl;
+package cn.hgy.domain.activity.service.quota.rule.impl;
 
 import cn.hgy.domain.activity.model.entity.ActivityCountEntity;
 import cn.hgy.domain.activity.model.entity.ActivityEntity;
 import cn.hgy.domain.activity.model.entity.ActivitySkuEntity;
 import cn.hgy.domain.activity.model.valobj.ActivityStateVO;
-import cn.hgy.domain.activity.service.rule.AbstractActionChain;
+import cn.hgy.domain.activity.service.quota.rule.AbstractActionChain;
 import cn.hgy.types.enums.ResponseCode;
 import cn.hgy.types.exception.AppException;
 import lombok.extern.slf4j.Slf4j;

@@ -1,4 +1,4 @@
-package cn.hgy.domain.activity.service.rule.impl;
+package cn.hgy.domain.activity.service.quota.rule.impl;
 
 import cn.hgy.domain.activity.model.entity.ActivityCountEntity;
 import cn.hgy.domain.activity.model.entity.ActivityEntity;
@@ -6,7 +6,7 @@ import cn.hgy.domain.activity.model.entity.ActivitySkuEntity;
 import cn.hgy.domain.activity.model.valobj.ActivitySkuStockKeyVO;
 import cn.hgy.domain.activity.repository.IActivityRepository;
 import cn.hgy.domain.activity.service.armory.IActivityDispatch;
-import cn.hgy.domain.activity.service.rule.AbstractActionChain;
+import cn.hgy.domain.activity.service.quota.rule.AbstractActionChain;
 import cn.hgy.types.enums.ResponseCode;
 import cn.hgy.types.exception.AppException;
 import lombok.RequiredArgsConstructor;

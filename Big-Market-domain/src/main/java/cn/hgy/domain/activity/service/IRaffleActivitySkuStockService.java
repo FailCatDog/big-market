@@ -7,7 +7,7 @@ import cn.hgy.domain.activity.model.valobj.ActivitySkuStockKeyVO;
  * @CreateTime: 2025-09-20
  * @Description: 活动sku库存处理接口
  */
-public interface ISkuStock {
+public interface IRaffleActivitySkuStockService {
     /**
      * 获取活动sku库存消耗队列
      *
