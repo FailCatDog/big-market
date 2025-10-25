@@ -8,7 +8,14 @@ package cn.hgy.domain.strategy.service.armory;
 public interface IStrategyArmory {
 
     /**
-     * 装配抽奖策略配置 TODO
+     * 装配抽奖策略配置【触发的时机可以为活动审核通过后进行调用】
+     * @param activityId
+     * @return
+     */
+    boolean assembleLotteryStrategyByActivityId(Long activityId);
+
+    /**
+     * 装配抽奖策略配置
      * @param strategyId 策略ID
      */
     boolean assembleLotteryStrategy(Long strategyId);

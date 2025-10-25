@@ -6,6 +6,7 @@ import cn.hgy.domain.activity.model.entity.*;
 import cn.hgy.domain.activity.model.valobj.ActivitySkuStockKeyVO;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * @Author: 黄光宇
@@ -44,4 +45,6 @@ public interface IActivityRepository {
     ActivityAccountEntity queryActivityAccountByUserId(String userId, Long activityId);
 
     ActivityAccountMonthEntity queryActivityAccountMonthByUserId(String userId, Long activityId, String month);
+
+    List<ActivitySkuEntity> queryActivitySkuListByActivityId(Long activityId);
 }
