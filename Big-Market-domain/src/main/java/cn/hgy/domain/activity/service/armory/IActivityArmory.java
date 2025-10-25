@@ -6,5 +6,7 @@ package cn.hgy.domain.activity.service.armory;
  * @Description: 活动装配预热
  */
 public interface IActivityArmory {
+    boolean assembleActivitySkuByActivityId(Long activityId);
+
     boolean assembleActivitySku(Long sku);
 }
