@@ -119,6 +119,18 @@ spring:
               standard:
                 sharding-column: userId
                 sharding-algorithm-name: table-inline
+          user_award_record:
+            actual-data-nodes: ds$->{1..2}.user_award_record_$->{0..3}
+            table-strategy:
+              standard:
+                sharding-column: userId
+                sharding-algorithm-name: table-inline
+          task:
+            actual-data-nodes: ds$->{1..2}.task_$->{0..3}
+            table-strategy:
+              standard:
+                sharding-column: userId
+                sharding-algorithm-name: table-inline
 
         # 分片算法配置
         sharding-algorithms:
@@ -146,6 +158,10 @@ spring:
         prefetch: 1 # 每次投递N个消息，消费完在投递N个
       topic:
         activity_sku_stock_zero: activity_sku_stock_zero
+
+  topic:
+    activity_sku_stock_zero: activity_sku_stock_zero
+    send_award: send_award
 
 # Redis
 redis:
