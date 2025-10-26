@@ -6,10 +6,8 @@ import cn.hgy.domain.strategy.model.entity.StrategyRuleEntity;
 import cn.hgy.domain.strategy.model.valobj.RuleTreeVO;
 import cn.hgy.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 import cn.hgy.domain.strategy.model.valobj.StrategyAwardStockKeyVO;
-import org.springframework.stereotype.Service;
 
-import java.math.BigDecimal;
-import java.util.HashMap;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -51,12 +49,21 @@ public interface IStrategyRepository {
 
     /**
      * 缓存奖品库存
-     * @param cacheKey key
+     *
+     * @param cacheKey   key
      * @param awardCount 库存值
      */
     void cacheStrategyAwardCount(String cacheKey, Integer awardCount);
 
     Boolean subtractionAwardStock(String cacheKey);
+
+    /**
+     * 缓存key，decr方式扣减库存
+     * @param cacheKey 缓存key
+     * @param endDateTime 活动结束时间
+     * @return 扣减结果
+     */
+    Boolean subtractionAwardStock(String cacheKey, Date endDateTime);
 
     /**
      * 写入奖品库存消费队列
@@ -94,4 +101,6 @@ public interface IStrategyRepository {
     Long queryStrategyIdByActivityId(Long activityId);
 
     Integer queryTodayUserRaffleCount(String userId, Long strategyId);
+
+    Map<String, Integer> queryAwardRuleLockCount(String[] treeIds);
 }

@@ -80,7 +80,15 @@ public class ActivityRepository implements IActivityRepository {
                 .strategyId(raffleActivity.getStrategyId())
                 .state(ActivityStateVO.valueOf(raffleActivity.getState()))
                 .build();
-        redisService.setValue(cacheKey, activityEntity);
+
+        // 计算缓存过期时间：活动结束时间 + 1天的缓冲时间
+        long expireTime = calculateCacheExpireTime(raffleActivity.getEndDateTime());
+        if (expireTime > 0) {
+            redisService.setValue(cacheKey, activityEntity, expireTime);
+        } else {
+            // 如果活动已结束，设置较短的缓存时间（1小时）
+            redisService.setValue(cacheKey, activityEntity, TimeUnit.HOURS.toMillis(1));
+        }
         return activityEntity;
     }
 
@@ -98,7 +106,9 @@ public class ActivityRepository implements IActivityRepository {
                 .dayCount(raffleActivityCount.getDayCount())
                 .monthCount(raffleActivityCount.getMonthCount())
                 .build();
-        redisService.setValue(cacheKey, activityCountEntity);
+
+        // 活动次数配置相对稳定，设置较长的缓存时间（24小时）
+        redisService.setValue(cacheKey, activityCountEntity, TimeUnit.HOURS.toMillis(24));
         return activityCountEntity;
     }
 
@@ -209,7 +219,14 @@ public class ActivityRepository implements IActivityRepository {
 
     @Override
     public void updateActivitySkuStock(Long sku) {
-        raffleActivitySkuDao.updateActivitySkuStock(sku);
+        // 优化：先查询当前库存状态，如果库存已经为0则不执行更新操作
+        RaffleActivitySku currentSku = raffleActivitySkuDao.queryActivitySku(sku);
+        if (currentSku != null && currentSku.getStockCountSurplus() > 0) {
+            raffleActivitySkuDao.updateActivitySkuStock(sku);
+            log.info("延迟队列消费-更新活动sku库存成功 sku:{} 当前剩余库存:{}", sku, currentSku.getStockCountSurplus());
+        } else {
+            log.info("延迟队列消费-跳过库存更新，库存已为0 sku:{}", sku);
+        }
     }
 
     @Override
@@ -411,6 +428,40 @@ public class ActivityRepository implements IActivityRepository {
             activitySkuEntities.add(activitySkuEntity);
         }
         return activitySkuEntities;
+    }
+
+    @Override
+    public Integer queryRaffleActivityAccountDayPartakeCount(Long activityId, String userId) {
+        RaffleActivityAccountDay raffleActivityAccountDay = new RaffleActivityAccountDay();
+        raffleActivityAccountDay.setActivityId(activityId);
+        raffleActivityAccountDay.setUserId(userId);
+        raffleActivityAccountDay.setDay(raffleActivityAccountDay.currentDay());
+        Integer dayPartakeCount = raffleActivityAccountDayDao.queryRaffleActivityAccountDayPartakeCount(raffleActivityAccountDay);
+
+        return null == dayPartakeCount ? 0 : dayPartakeCount;
+    }
+
+    /**
+     * 计算缓存过期时间
+     * @param endDateTime 活动结束时间
+     * @return 过期时间（毫秒），如果活动已结束返回0
+     */
+    private long calculateCacheExpireTime(Date endDateTime) {
+        if (endDateTime == null) {
+            // 如果没有结束时间，设置默认缓存时间（7天）
+            return TimeUnit.DAYS.toMillis(7);
+        }
+
+        long currentTime = System.currentTimeMillis();
+        long endTime = endDateTime.getTime();
+
+        if (endTime <= currentTime) {
+            // 活动已结束，返回0表示使用短期缓存
+            return 0;
+        }
+
+        // 活动未结束，缓存到活动结束时间 + 1天的缓冲时间
+        return endTime - currentTime + TimeUnit.DAYS.toMillis(1);
     }
 }
 

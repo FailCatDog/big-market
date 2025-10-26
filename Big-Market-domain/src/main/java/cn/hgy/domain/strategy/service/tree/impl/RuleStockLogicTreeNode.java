@@ -10,6 +10,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
+import java.util.Date;
+
 /**
  * @Author: 黄光宇
  * @CreateTime: 2025-08-28
@@ -24,10 +26,10 @@ public class RuleStockLogicTreeNode implements ILogicTreeNode {
     private final IStrategyRepository strategyRepository;
 
     @Override
-    public DefaultTreeFactory.TreeActionEntity logic(String userId, Long strategyId, Integer awardId, String ruleValue) {
+    public DefaultTreeFactory.TreeActionEntity logic(String userId, Long strategyId, Integer awardId, String ruleValue, Date endDateTime) {
         log.info("规则过滤-库存扣减 userId：{} strategyId：{} awardId：{}", userId, strategyId, awardId);
         // 扣减库存
-        Boolean status = strategyDispatch.subtractionAwardStock(strategyId, awardId);
+        Boolean status = strategyDispatch.subtractionAwardStock(strategyId, awardId, endDateTime);
         // status true 扣减成功，false 扣减失败
         if (status) {
             // 写入延迟队列，延迟消费更新数据库记录 【在trigger的job；UpdateAwardStockJob 下消费队列，更新数据库记录】

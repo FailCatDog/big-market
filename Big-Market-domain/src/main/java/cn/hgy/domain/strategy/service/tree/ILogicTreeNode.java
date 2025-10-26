@@ -2,6 +2,8 @@ package cn.hgy.domain.strategy.service.tree;
 
 import cn.hgy.domain.strategy.service.tree.factory.DefaultTreeFactory;
 
+import java.util.Date;
+
 /**
  * @Author: 黄光宇
  * @CreateTime: 2025-08-28
@@ -9,5 +11,5 @@ import cn.hgy.domain.strategy.service.tree.factory.DefaultTreeFactory;
  */
 public interface ILogicTreeNode {
 
-    DefaultTreeFactory.TreeActionEntity logic(String userId, Long strategyId, Integer awardId, String ruleValue);
+    DefaultTreeFactory.TreeActionEntity logic(String userId, Long strategyId, Integer awardId, String ruleValue, Date endDateTime);
 }
