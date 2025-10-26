@@ -17,11 +17,7 @@ import org.redisson.api.RBlockingQueue;
 import org.redisson.api.RDelayedQueue;
 import org.springframework.stereotype.Repository;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -46,6 +42,7 @@ public class StrategyRepository implements IStrategyRepository {
 
     @Override
     public List<StrategyAwardEntity> queryStrategyAwardList(Long strategyId) {
+        // 优先从缓存中获取
         String cacheKey = Constants.RedisKey.STRATEGY_AWARD_KEY_LIST + strategyId;
         List<StrategyAwardEntity> strategyAwardEntities = redisService.getValue(cacheKey);
 
@@ -59,11 +56,12 @@ public class StrategyRepository implements IStrategyRepository {
                     .strategyId(strategyAward.getStrategyId())
                     .awardId(strategyAward.getAwardId())
                     .awardTitle(strategyAward.getAwardTitle())
-                    .awardSubTitle(strategyAward.getAwardSubtitle())
+                    .awardSubtitle(strategyAward.getAwardSubtitle())
                     .awardCount(strategyAward.getAwardCount())
                     .awardCountSurplus(strategyAward.getAwardCountSurplus())
                     .awardRate(strategyAward.getAwardRate())
                     .sort(strategyAward.getSort())
+                    .ruleModels(strategyAward.getRuleModels())
                     .build();
             strategyAwardEntities.add(strategyAwardEntity);
         }
@@ -116,8 +114,9 @@ public class StrategyRepository implements IStrategyRepository {
                 .ruleModels(strategy.getRuleModels())
                 .build();
 
-        redisService.setValue(cacheKey, strategyEntity);
-        return null;
+        // 策略配置相对稳定，设置较长的缓存时间（7天）
+        redisService.setValue(cacheKey, strategyEntity, TimeUnit.DAYS.toMillis(7));
+        return strategyEntity;
     }
 
     @Override
@@ -199,7 +198,8 @@ public class StrategyRepository implements IStrategyRepository {
                 .treeNodeMap(treeNodeMap)
                 .build();
 
-        redisService.setValue(cacheKey, ruleTreeVODB);
+        // 规则树配置相对稳定，设置较长的缓存时间（7天）
+        redisService.setValue(cacheKey, ruleTreeVODB, TimeUnit.DAYS.toMillis(7));
         return ruleTreeVODB;
     }
 
@@ -214,13 +214,17 @@ public class StrategyRepository implements IStrategyRepository {
 
     @Override
     public void cacheStrategyAwardCount(String cacheKey, Integer awardCount) {
-        Long cacheAwardCount = redisService.getAtomicLong(cacheKey);
-        if (null != cacheAwardCount) return;
+        if (redisService.isExists(cacheKey)) return;
         redisService.setAtomicLong(cacheKey, awardCount);
     }
 
     @Override
     public Boolean subtractionAwardStock(String cacheKey) {
+        return subtractionAwardStock(cacheKey, null);
+    }
+
+    @Override
+    public Boolean subtractionAwardStock(String cacheKey, Date endDateTime) {
         long surplus = redisService.decr(cacheKey);
         if (surplus < 0) {
             redisService.setValue(cacheKey, 0);
@@ -228,7 +232,13 @@ public class StrategyRepository implements IStrategyRepository {
         }
 
         String lockKey = cacheKey + Constants.UNDERLINE + surplus;
-        Boolean lock = redisService.setNx(lockKey);
+        Boolean lock = false;
+        if (null != endDateTime) {
+            long expireMillis = endDateTime.getTime() - System.currentTimeMillis() + TimeUnit.DAYS.toMillis(1);
+        }else {
+            lock = redisService.setNx(lockKey);
+        }
+
         if (!lock) {
             log.info("策略奖品库存加锁失败 {}", lockKey);
         }
@@ -252,10 +262,19 @@ public class StrategyRepository implements IStrategyRepository {
 
     @Override
     public void updateStrategyAwardStock(Long strategyId, Integer awardId) {
-        StrategyAward strategyAward = new StrategyAward();
-        strategyAward.setStrategyId(strategyId);
-        strategyAward.setAwardId(awardId);
-        strategyAwardDao.updateStrategyAwardStock(strategyAward);
+        // 优化：先查询当前库存状态，如果库存已经为0则不执行更新操作
+        StrategyAward queryParam = new StrategyAward();
+        queryParam.setStrategyId(strategyId);
+        queryParam.setAwardId(awardId);
+        StrategyAward currentAward = strategyAwardDao.queryStrategyAward(queryParam);
+
+        if (currentAward != null && currentAward.getAwardCountSurplus() > 0) {
+            strategyAwardDao.updateStrategyAwardStock(queryParam);
+            log.info("延迟队列消费-更新策略奖品库存成功 strategyId:{} awardId:{} 当前剩余库存:{}",
+                    strategyId, awardId, currentAward.getAwardCountSurplus());
+        } else {
+            log.info("延迟队列消费-跳过库存更新，库存已为0 strategyId:{} awardId:{}", strategyId, awardId);
+        }
     }
 
     @Override
@@ -276,7 +295,7 @@ public class StrategyRepository implements IStrategyRepository {
                 .strategyId(strategyAwardRes.getStrategyId())
                 .awardId(strategyAwardRes.getAwardId())
                 .awardTitle(strategyAwardRes.getAwardTitle())
-                .awardSubTitle(strategyAwardRes.getAwardSubtitle())
+                .awardSubtitle(strategyAwardRes.getAwardSubtitle())
                 .awardCount(strategyAwardRes.getAwardCount())
                 .awardCountSurplus(strategyAwardRes.getAwardCountSurplus())
                 .awardRate(strategyAwardRes.getAwardRate())
@@ -307,5 +326,19 @@ public class StrategyRepository implements IStrategyRepository {
         if (null == raffleActivityAccountDay) return 0;
         // 总次数 - 剩余的，等于今日参与的
         return raffleActivityAccountDay.getDayCount() - raffleActivityAccountDay.getDayCountSurplus();
+    }
+
+    @Override
+    public Map<String, Integer> queryAwardRuleLockCount(String[] treeIds) {
+        if (null == treeIds ||treeIds.length == 0) return new HashMap<>();
+
+        List<RuleTreeNode> ruleTreeNodeList = ruleTreeNodeDao.queryRuleLocks(treeIds);
+        Map<String, Integer> resultMap = new HashMap<>();
+        for (RuleTreeNode node : ruleTreeNodeList) {
+            String treeId = node.getTreeId();
+            Integer ruleValue = Integer.valueOf(node.getRuleValue());
+            resultMap.put(treeId, ruleValue);
+        }
+        return resultMap;
     }
 }

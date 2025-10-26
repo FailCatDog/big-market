@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 /**
  * @Author: 黄光宇
  * @CreateTime: 2025-08-25
@@ -19,4 +21,5 @@ public class RaffleAwardEntity {
     private Integer awardId;
     private String awardConfig;
     private Integer sort;
+    private Date endDateTime;
 }
